@@ -1,5 +1,5 @@
-import { Movie } from '../models';
-import { genreMapper } from '../utilities';
+import { Movie } from '../../models';
+import { genreMapper } from '../../utilities';
 
 const Query = {
   movie: async (_, { _id }) => await Movie.findById(_id),

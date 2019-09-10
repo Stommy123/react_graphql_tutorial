@@ -3,8 +3,7 @@ import express_graphql from 'express-graphql';
 import mongoose from 'mongoose';
 import session from 'express-session';
 import connectMongo from 'connect-mongo';
-import { schema } from './schema';
-import { rootResolver } from './resolvers';
+import { schema } from './graphql';
 
 const app = express();
 mongoose.connect('mongodb://localhost:27017/graphql_movies');
@@ -24,7 +23,6 @@ app.use(
   '/graphql',
   express_graphql({
     schema,
-    rootValue: rootResolver,
     graphiql: true
   })
 );
