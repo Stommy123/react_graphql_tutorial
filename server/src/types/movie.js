@@ -1,14 +1,22 @@
-const MovieQuery = `
+const Query = `
   type Query {
-    movie(id: Int!): Movie
+    movie(_id: String): Movie
     movies(genre: [Genre]): [Movie]
   }
 `;
 
-const MovieType = `
+const Mutation = `
+  type Mutation {
+    createMovie(input: MovieInput!): Movie
+    deleteMovie(_id: String): DeleteMovieResponse
+  }
+`
+
+const Type = `
   type Movie {
-    id: Int
+    _id: String
     title: String
+    year: String
     director: String
     duration: String
     genre: [String]
@@ -16,7 +24,26 @@ const MovieType = `
   }
 `;
 
-const MovieEnum = `
+const Input = `
+  input MovieInput {
+    title: String!, 
+    year: String!, 
+    director: String!, 
+    duration: String!, 
+    genre: [String]!,
+    rate: String,
+  }
+`
+
+const Response = `
+  type DeleteMovieResponse {
+    success: Boolean
+    status: Int
+    message: String
+  }
+`
+
+const Enum = `
   enum Genre {
     ACTION
     ADVENTURE
@@ -40,4 +67,4 @@ const MovieEnum = `
   }
 `;
 
-export default [MovieQuery, MovieType, MovieEnum];
+export default [Query, Mutation, Type, Input, Response, Enum];

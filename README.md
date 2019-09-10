@@ -4,3 +4,5 @@
 - Graphql
 - Apollo
 - Express
+- Mongoose 
+- MongoDB

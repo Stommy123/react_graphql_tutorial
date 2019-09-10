@@ -15,3 +15,25 @@ export const constCase = string => {
     return formatedWord;
   }, String());
 };
+
+export const genreMapper = genre =>  ({
+  ACTION: 'Action',
+  ADVENTURE: 'Adventure',
+  ANIMATION: 'Animation',
+  BIOGRAPHY: 'Biography',
+  COMEDY: 'Comedy',
+  CRIME: 'Crime',
+  DRAMA: 'Drama',
+  FAMILY: 'Family',
+  FANTASY: 'Fantasy',
+  HISTORY: 'History',
+  HORROR: 'Horror',
+  MUSIC: 'Music',
+  MUSICAL: 'Musical',
+  MYSTERY: 'Mystery',
+  ROMANCE: 'Romance',
+  SCI_FI: 'Sci-Fi',
+  THRILLER: 'Thriller',
+  WAR: 'War',
+  WESTERN: 'Western',
+}[genre])
