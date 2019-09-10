@@ -1,7 +1,7 @@
 import { movieData } from '../data';
 import { constCase } from '../utilities';
 
-export const resolver = {
+const resolver = {
   Query: {
     movie: (_, { id }) => movieData.find(movie => movie.id === id),
     movies: (_, { genre: genres = [] }) => {
@@ -14,3 +14,5 @@ export const resolver = {
     }
   }
 };
+
+export default resolver;

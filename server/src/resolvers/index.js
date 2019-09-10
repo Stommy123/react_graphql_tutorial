@@ -1,3 +1,3 @@
-import { resolver as movieResolver } from './movie';
+import Movie from './movie';
 
-export const rootResolver = { ...movieResolver };
+export const rootResolver = { ...Movie };
