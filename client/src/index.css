@@ -1,13 +1,245 @@
+/* Base Styles */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #1d2a33 url("./assets/images/bg.jpg") no-repeat;
+  background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+a:hover {
+  color: rgba(49, 176, 213, 0.7);
+}
+
+/* Component Styles */
+
+.navbar {
+  padding: 1rem 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+.lead {
+  margin-bottom: 2.5rem;
+}
+.main {
+  color: #fff;
+  min-height: calc(100vh - 34px);
+}
+.foot {
+  font-size: 0.85rem;
+  padding: 0.5rem 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Modifier Styles */
+
+.nav-items .nav-link {
+  margin: 0 1rem;
+}
+.navbar-brand {
+  margin: 0;
+}
+.navbar .nav-link,
+.navbar .btn {
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+.list-group {
+  color: initial;
+}
+.label {
+  font-size: 0.88rem;
+  vertical-align: top;
+  margin: 3px 0 0 4px;
+}
+
+/* Button Styles */
+
+.btn-primary {
+  background: #417aba;
+  border-color: #417aba;
+}
+.btn-info {
+  background-color: #31b0d5;
+  border-color: #2aabd2;
+}
+.btn-info:hover {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+.btn-light {
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.12);
+}
+.btn-light:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.active,
+.btn {
+  transition: 0.4s;
+}
+
+/* Icon Styles */
+
+.icn-logo {
+  margin: 3px 3px 0;
+  float: left;
+}
+.icn-person {
+  font-size: 50px;
+  border-radius: 50%;
+  border: solid 2px;
+  padding: 0.5rem;
+}
+.avatar {
+  width: 35px;
+  margin-right: 18px;
+  border: solid 2px rgba(255, 255, 255, 0.75);
+}
+.options {
+  display: none;
+}
+.list-group-item:hover .options {
+  display: block;
+}
+.options .material-icons {
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  color: rgba(0, 0, 0, 0.35);
+}
+.options .material-icons:hover {
+  color: initial;
+}
+
+.favorite-book {
+  margin-top: 30px;
+}
+
+/* Media Queries */
+
+@media (min-width: 0) and (max-width: 47em) {
+  .navbar {
+    background: #1d2a33;
+  }
+  .nav-items .nav-item {
+    float: none;
+  }
+  .nav-items .nav-link {
+    padding: 0.65rem 0;
+    display: block;
+  }
+  .nav-items {
+    padding: 1rem 0;
+    clear: left;
+  }
+  .navbar .btn {
+    margin-left: 1rem;
+  }
+  .main {
+    padding-top: 6rem;
+  }
+}
+
+.c-modal-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transform: translateZ(0);
+  background-color: rgba(38, 50, 56, 0.93);
+  transition: all 0.4s;
+  animation: fadeIn 0.3s;
+}
+
+.modalWrapper {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.modalHeader {
+  margin: 0 auto;
+}
+
+.c-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 250px;
+  border-radius: 5px;
+  padding: 2.5em 1.5em 1.5em 1.5em;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 3px rgba(55, 71, 79, 0.3);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: transform 0.7s, opacity 0.4s;
+  transform: translate(-50%, -70%);
+  animation: fadeIn 0.6s ease, slideIn 0.6s;
+}
+
+.c-modal_body {
+  text-align: center;
+}
+.modal-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.slideIn {
+  transform: translate(-50%, -50%);
+  transition: transform 0.7s, opacity 0.4s;
+  opacity: 1;
+}
+.fadeIn {
+  opacity: 1;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translate(-50%, -70%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 48em) {
+  .navbar {
+    min-height: 70px;
+  }
+  .navbar-nav .container {
+    display: -webkit-flex;
+    display: flex;
+  }
+  .nav-items {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .main {
+    padding-top: 8rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.react-select .select__option {
+  color: black;
+}
+
+.react-select.active .select__single-value {
+  opacity: 0.2;
+}
+
+.search {
+  color: hsl(0,0%,50%);
 }

@@ -1,6 +1,6 @@
 const Query = `
   type Query {
-    movie(_id: String): Movie
+    movie(_id: String!): Movie
     movies(where: MovieWhereInput): [Movie]
   }
 `;
@@ -8,9 +8,9 @@ const Query = `
 const Mutation = `
   type Mutation {
     createMovie(input: NewMovieInput!): Movie
-    deleteMovie(_id: String): DeleteMovieResponse
+    deleteMovie(_id: String!): DeleteMovieResponse
   }
-`
+`;
 
 const Type = `
   type Movie {

@@ -1,27 +1,29 @@
 import gql from 'graphql-tag';
 
 export const FetchMovie = gql`
-  query FetchMovie($id: Int!) {
-    movie(id: $id) {
-      id
-      title
-      director
-      duration
-      rate
+  query FetchMovie($_id: String!) {
+    movie(_id: $_id) {
+      _id
+      title 
+      year 
+      director 
+      duration 
       genre
+      rate
     }
   }
 `;
 
 export const FetchMovies = gql`
-  query FetchMovies($genre: [Genre]) {
-    movies(genre: $genre) {
-      id
-      title
-      director
-      duration
-      rate
+  query FetchMovies($where: MovieWhereInput) {
+    movies(where: $where) {
+      _id
+      title 
+      year 
+      director 
+      duration 
       genre
+      rate
     }
   }
 `;
