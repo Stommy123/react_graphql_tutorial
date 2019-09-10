@@ -1,3 +1,10 @@
 import Movie from './movie';
 
-export const rootResolver = { ...Movie };
+export const rootResolver = {
+  Query: {
+    ...Movie.Query
+  },
+  Mutation: {
+    ...Movie.Mutation
+  }
+};
