@@ -2,19 +2,20 @@ import { Movie } from '../models';
 import { genreMapper } from '../utilities';
 
 const Query = {
-  movie: async (_, { _id }) => {
-    const movie = await Movie.findById(_id)
-    return movie
-  },
-  movies: async (_, { genre }) => {
+  movie: async (_, { _id }) => await Movie.findById(_id),
+  movies: async (_, { where = {} }) => {
+    const { title, director, genre, ...whereClause } = where
     const parsedGenres = genre && genre.map(g => genreMapper(g))
+    const parsedTitle = title && new RegExp(title, 'i');
+    const parsedDirector = director && new RegExp(director, 'i')
     const variables = { 
+      ...whereClause,
+      ...(parsedTitle && { title: parsedTitle }),
+      ...(parsedDirector && { director: parsedDirector }),
       ...(parsedGenres && { genre: parsedGenres.length > 1 ? parsedGenres : parsedGenres[0] })
     }
-    const movies = await Movie.find({ ...variables });
-    return movies
+    return await Movie.find(variables);
   }
-
 }
 
 const Mutation = {

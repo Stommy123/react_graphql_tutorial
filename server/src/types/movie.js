@@ -1,13 +1,13 @@
 const Query = `
   type Query {
     movie(_id: String): Movie
-    movies(genre: [Genre]): [Movie]
+    movies(where: MovieWhereInput): [Movie]
   }
 `;
 
 const Mutation = `
   type Mutation {
-    createMovie(input: MovieInput!): Movie
+    createMovie(input: NewMovieInput!): Movie
     deleteMovie(_id: String): DeleteMovieResponse
   }
 `
@@ -25,7 +25,13 @@ const Type = `
 `;
 
 const Input = `
-  input MovieInput {
+  input MovieWhereInput {
+    title: String
+    year: String
+    director: String
+    genre: [Genre]
+  }
+  input NewMovieInput {
     title: String!, 
     year: String!, 
     director: String!, 
