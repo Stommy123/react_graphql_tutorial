@@ -22,7 +22,6 @@ const MovieList = _ => {
     setActiveFilters({});
     setFiltersToApply({});
   };
-  console.log('active filters', activeFilters);
   useEffect(
     _ => {
       !loading && setMovies(data.movies || []);
