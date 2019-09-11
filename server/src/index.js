@@ -1,13 +1,17 @@
 import express from 'express';
+import dotenv from 'dotenv';
 import express_graphql from 'express-graphql';
 import mongoose from 'mongoose';
 import session from 'express-session';
 import connectMongo from 'connect-mongo';
 import { schema } from './graphql';
 
+dotenv.config();
+const MONGO_DB = process.env.DB;
+
 const app = express();
-mongoose.connect('mongodb://localhost:27017/graphql_movies');
-const db = mongoose.connection
+mongoose.connect(MONGO_DB);
+const db = mongoose.connection;
 const MongoStore = connectMongo(session);
 
 app.use(
@@ -17,7 +21,7 @@ app.use(
     saveUninitialized: false,
     store: new MongoStore({ mongooseConnection: db })
   })
-)
+);
 
 app.use(
   '/graphql',

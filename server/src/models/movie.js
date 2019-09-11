@@ -3,28 +3,27 @@ import { Schema, model } from 'mongoose';
 const MovieSchema = new Schema({
   title: {
     type: String,
-    required: true,
-    unique: true,
+    required: true
   },
   director: {
     type: String,
-    required: true,
+    required: true
   },
   year: {
     type: String,
-    required: true,
+    required: true
   },
   duration: {
     type: String,
-    required: true,
+    required: true
   },
   genre: {
     type: Array,
-    required: true,
+    required: true
   },
   rate: {
-    type: String,
+    type: String
   }
-})
+});
 
 export const Movie = model('Movie', MovieSchema);

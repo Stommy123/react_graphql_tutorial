@@ -1,6 +1,5 @@
 export const movieData = [
   {
-    id: 1,
     title: 'The Shawshank Redemption',
     year: '1994',
     director: 'Frank Darabont',
@@ -9,7 +8,6 @@ export const movieData = [
     rate: '9.3'
   },
   {
-    id: 2,
     title: 'The Godfather',
     year: '1972',
     director: 'Francis Ford Coppola',
@@ -18,7 +16,6 @@ export const movieData = [
     rate: '9.2'
   },
   {
-    id: 3,
     title: 'The Godfather: Part II',
     year: '1974',
     director: 'Francis Ford Coppola',
@@ -27,7 +24,6 @@ export const movieData = [
     rate: '9.0'
   },
   {
-    id: 4,
     title: 'The Dark Knight',
     year: '2008',
     director: 'Christopher Nolan',
@@ -36,7 +32,6 @@ export const movieData = [
     rate: '9.0'
   },
   {
-    id: 5,
     title: '12 Angry Men',
     year: '1957',
     director: 'Sidney Lumet',
@@ -45,7 +40,6 @@ export const movieData = [
     rate: '8.9'
   },
   {
-    id: 6,
     title: "Schindler's List",
     year: '1993',
     director: 'Steven Spielberg',
@@ -54,7 +48,6 @@ export const movieData = [
     rate: '8.9'
   },
   {
-    id: 7,
     title: 'Pulp Fiction',
     year: '1994',
     director: 'Quentin Tarantino',
@@ -63,7 +56,6 @@ export const movieData = [
     rate: '8.9'
   },
   {
-    id: 8,
     title: 'The Lord of the Rings: The Return of the King',
     year: '2003',
     director: 'Peter Jackson',
@@ -72,7 +64,6 @@ export const movieData = [
     rate: '8.9'
   },
   {
-    id: 9,
     title: 'Il buono, il brutto, il cattivo',
     year: '1966',
     director: 'Sergio Leone',
@@ -81,7 +72,6 @@ export const movieData = [
     rate: '8.9'
   },
   {
-    id: 10,
     title: 'Fight Club',
     year: '1999',
     director: 'David Fincher',
@@ -90,7 +80,6 @@ export const movieData = [
     rate: '8.8'
   },
   {
-    id: 11,
     title: 'The Lord of the Rings: The Fellowship of the Ring',
     year: '2001',
     director: 'Peter Jackson',
@@ -99,7 +88,6 @@ export const movieData = [
     rate: '8.8'
   },
   {
-    id: 12,
     title: 'Forrest Gump',
     year: '1994',
     director: 'Robert Zemeckis',
@@ -108,7 +96,6 @@ export const movieData = [
     rate: '8.8'
   },
   {
-    id: 13,
     title: 'Star Wars: Episode V - The Empire Strikes Back',
     year: '1980',
     director: 'Irvin Kershner',
@@ -117,7 +104,6 @@ export const movieData = [
     rate: '8.8'
   },
   {
-    id: 14,
     title: 'Inception',
     year: '2010',
     director: 'Christopher Nolan',
@@ -126,7 +112,6 @@ export const movieData = [
     rate: '8.8'
   },
   {
-    id: 15,
     title: 'The Lord of the Rings: The Two Towers',
     year: '2002',
     director: 'Peter Jackson',
@@ -135,7 +120,6 @@ export const movieData = [
     rate: '8.7'
   },
   {
-    id: 16,
     title: "One Flew Over the Cuckoo's Nest",
     year: '1975',
     director: 'Milos Forman',
@@ -144,7 +128,6 @@ export const movieData = [
     rate: '8.7'
   },
   {
-    id: 17,
     title: 'Goodfellas',
     year: '1990',
     director: 'Martin Scorsese',
@@ -153,7 +136,6 @@ export const movieData = [
     rate: '8.7'
   },
   {
-    id: 18,
     title: 'The Matrix',
     year: '1999',
     director: 'Lana Wachowski',
@@ -162,7 +144,6 @@ export const movieData = [
     rate: '8.7'
   },
   {
-    id: 19,
     title: 'Shichinin no samurai',
     year: '1954',
     director: 'Akira Kurosawa',
@@ -171,7 +152,6 @@ export const movieData = [
     rate: '8.7'
   },
   {
-    id: 20,
     title: 'Star Wars',
     year: '1977',
     director: 'George Lucas',
@@ -180,7 +160,6 @@ export const movieData = [
     rate: '8.7'
   },
   {
-    id: 21,
     title: 'Cidade de Deus',
     year: '2002',
     director: 'Fernando Meirelles',
@@ -189,7 +168,6 @@ export const movieData = [
     rate: '8.7'
   },
   {
-    id: 22,
     title: 'Se7en',
     year: '1995',
     director: 'David Fincher',
@@ -198,7 +176,6 @@ export const movieData = [
     rate: '8.6'
   },
   {
-    id: 23,
     title: 'The Silence of the Lambs',
     year: '1991',
     director: 'Jonathan Demme',
@@ -207,7 +184,6 @@ export const movieData = [
     rate: '8.6'
   },
   {
-    id: 24,
     title: "It's a Wonderful Life",
     year: '1946',
     director: 'Frank Capra',
@@ -216,7 +192,6 @@ export const movieData = [
     rate: '8.6'
   },
   {
-    id: 25,
     title: 'La vita è bella',
     year: '1997',
     director: 'Roberto Benigni',
@@ -225,7 +200,6 @@ export const movieData = [
     rate: '8.6'
   },
   {
-    id: 26,
     title: 'The Usual Suspects',
     year: '1995',
     director: 'Bryan Singer',
@@ -234,7 +208,6 @@ export const movieData = [
     rate: '8.6'
   },
   {
-    id: 27,
     title: 'Léon',
     year: '1988',
     director: 'Luc Besson',
@@ -243,7 +216,6 @@ export const movieData = [
     rate: '8.6'
   },
   {
-    id: 28,
     title: 'Saving Private Ryan',
     year: '1998',
     director: 'Steven Spielberg',
@@ -252,7 +224,6 @@ export const movieData = [
     rate: '8.6'
   },
   {
-    id: 29,
     title: 'Sen to Chihiro no kamikakushi',
     year: '2001',
     director: 'Hayao Miyazaki',
@@ -261,7 +232,6 @@ export const movieData = [
     rate: '8.6'
   },
   {
-    id: 30,
     title: 'American History X',
     year: '1998',
     director: 'Tony Kaye',
@@ -270,7 +240,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 31,
     title: "C'era una volta il West",
     year: '1968',
     director: 'Sergio Leone',
@@ -279,7 +248,6 @@ export const movieData = [
     rate: '8.6'
   },
   {
-    id: 32,
     title: 'Interstellar',
     year: '2014',
     director: 'Christopher Nolan',
@@ -288,7 +256,6 @@ export const movieData = [
     rate: '8.6'
   },
   {
-    id: 33,
     title: 'Psycho',
     year: '1960',
     director: 'Alfred Hitchcock',
@@ -297,7 +264,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 34,
     title: 'The Green Mile',
     year: '1999',
     director: 'Frank Darabont',
@@ -306,7 +272,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 35,
     title: 'Casablanca',
     year: '1942',
     director: 'Michael Curtiz',
@@ -315,7 +280,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 36,
     title: 'City Lights',
     year: '1931',
     director: 'Charles Chaplin',
@@ -324,7 +288,6 @@ export const movieData = [
     rate: '8.6'
   },
   {
-    id: 37,
     title: 'Intouchables',
     year: '2011',
     director: 'Olivier Nakache',
@@ -333,7 +296,6 @@ export const movieData = [
     rate: '8.6'
   },
   {
-    id: 38,
     title: 'Modern Times',
     year: '1936',
     director: 'Charles Chaplin',
@@ -342,7 +304,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 39,
     title: 'Raiders of the Lost Ark',
     year: '1981',
     director: 'Steven Spielberg',
@@ -351,7 +312,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 40,
     title: 'The Pianist',
     year: '2002',
     director: 'Roman Polanski',
@@ -360,7 +320,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 41,
     title: 'The Departed',
     year: '2006',
     director: 'Martin Scorsese',
@@ -369,7 +328,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 42,
     title: 'Rear Window',
     year: '1954',
     director: 'Alfred Hitchcock',
@@ -378,7 +336,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 43,
     title: 'Terminator 2: Judgment Day',
     year: '1991',
     director: 'James Cameron',
@@ -387,7 +344,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 44,
     title: 'Back to the Future',
     year: '1985',
     director: 'Robert Zemeckis',
@@ -396,7 +352,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 45,
     title: 'Whiplash',
     year: '2014',
     director: 'Damien Chazelle',
@@ -405,7 +360,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 46,
     title: 'Gladiator',
     year: '2000',
     director: 'Ridley Scott',
@@ -414,7 +368,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 47,
     title: 'The Prestige',
     year: '1994',
     director: 'Christopher Nolan',
@@ -423,7 +376,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 48,
     title: 'The Lion King',
     year: '1994',
     director: 'Roger Allers',
@@ -432,7 +384,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 49,
     title: 'Memento',
     year: '2000',
     director: 'Christopher Nolan',
@@ -441,7 +392,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 50,
     title: 'Apocalypse Now',
     year: '1979',
     director: 'Francis Ford Coppola',
@@ -450,7 +400,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 51,
     title: 'Alien',
     year: '1979',
     director: 'Ridley Scott',
@@ -459,7 +408,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 52,
     title: 'The Great Dictator',
     year: '1940',
     director: 'Charles Chaplin',
@@ -468,7 +416,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 53,
     title: 'Sunset Blvd.',
     year: '1950',
     director: 'Billy Wilder',
@@ -477,7 +424,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 54,
     title: 'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb',
     year: '1964',
     director: 'Stanley Kubrick',
@@ -486,7 +432,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 55,
     title: 'Nuovo Cinema Paradiso',
     year: '1988',
     director: 'Giuseppe Tornatore',
@@ -495,7 +440,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 56,
     title: 'Das Leben der Anderen',
     year: '2006',
     director: 'Florian Henckel von Donnersmarck',
@@ -504,7 +448,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 57,
     title: 'Hotaru no haka',
     year: '1988',
     director: 'Isao Takahata',
@@ -513,7 +456,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 58,
     title: 'Blade Runner 2049',
     year: '2017',
     director: 'Denis Villeneuve',
@@ -522,7 +464,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 59,
     title: 'Paths of Glory',
     year: '1957',
     director: 'Stanley Kubrick',
@@ -531,7 +472,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 60,
     title: 'Django Unchained',
     year: '2012',
     director: 'Quentin Tarantino',
@@ -540,7 +480,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 61,
     title: 'The Shining',
     year: '1980',
     director: 'Stanley Kubrick',
@@ -549,7 +488,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 62,
     title: 'WALL·E',
     year: '2008',
     director: 'Andrew Stanton',
@@ -558,7 +496,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 63,
     title: 'American Beauty',
     year: '1999',
     director: 'Sam Mendes',
@@ -567,7 +504,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 64,
     title: 'The Dark Knight Rises',
     year: '2012',
     director: 'Christopher Nolan',
@@ -576,7 +512,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 65,
     title: 'Mononoke-hime',
     year: '1997',
     director: 'Hayao Miyazaki',
@@ -585,7 +520,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 66,
     title: 'Oldeuboi',
     year: '2003',
     director: 'Chan-wook Park',
@@ -594,7 +528,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 67,
     title: 'Aliens',
     year: '1986',
     director: 'James Cameron',
@@ -603,7 +536,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 68,
     title: 'Witness for the Prosecution',
     year: '1957',
     director: 'Billy Wilder',
@@ -612,7 +544,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 69,
     title: 'Once Upon a Time in America',
     year: '1984',
     director: 'Sergio Leone',
@@ -621,7 +552,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 70,
     title: 'Das Boot',
     year: '1981',
     director: 'Wolfgang Petersen',
@@ -630,7 +560,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 71,
     title: 'Citizen Kane',
     year: '1941',
     director: 'Orson Welles',
@@ -639,7 +568,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 72,
     title: 'Dangal',
     year: '2016',
     director: 'Nitesh Tiwari',
@@ -648,7 +576,6 @@ export const movieData = [
     rate: '8.6'
   },
   {
-    id: 73,
     title: 'Vertigo',
     year: '2001',
     director: 'Alfred Hitchcock',
@@ -657,7 +584,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 74,
     title: 'North by Northwest',
     year: '1959',
     director: 'Alfred Hitchcock',
@@ -666,7 +592,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 75,
     title: 'Star Wars: Episode VI - Return of the Jedi',
     year: '1983',
     director: 'Richard Marquand',
@@ -675,7 +600,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 76,
     title: 'Braveheart',
     year: '1995',
     director: 'Mel Gibson',
@@ -684,7 +608,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 77,
     title: 'Reservoir Dogs',
     year: '1992',
     director: 'Quentin Tarantino',
@@ -693,7 +616,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 78,
     title: 'M',
     year: '1931',
     director: 'Fritz Lang',
@@ -702,7 +624,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 79,
     title: 'Requiem for a Dream',
     year: '2000',
     director: 'Darren Aronofsky',
@@ -711,7 +632,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 80,
     title: "Le fabuleux destin d'Amélie Poulain",
     year: '2001',
     director: 'Jean-Pierre Jeunet',
@@ -720,7 +640,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 81,
     title: 'Taare Zameen Par',
     year: '2007',
     director: 'Aamir Khan',
@@ -729,7 +648,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 82,
     title: 'A Clockwork Orange',
     year: '1971',
     director: 'Stanley Kubrick',
@@ -738,7 +656,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 83,
     title: 'Kimi no na wa.',
     year: '2016',
     director: 'Makoto Shinkai',
@@ -747,7 +664,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 84,
     title: 'Lawrence of Arabia',
     year: '1962',
     director: 'David Lean',
@@ -756,7 +672,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 85,
     title: 'Double Indemnity',
     year: '1944',
     director: 'Billy Wilder',
@@ -765,7 +680,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 86,
     title: 'Amadeus',
     year: '1984',
     director: 'Milos Forman',
@@ -774,7 +688,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 87,
     title: 'Eternal Sunshine of the Spotless Mind',
     year: '2004',
     director: 'Michel Gondry',
@@ -783,7 +696,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 88,
     title: 'Taxi Driver',
     year: '1976',
     director: 'Martin Scorsese',
@@ -792,7 +704,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 89,
     title: 'To Kill a Mockingbird',
     year: '1962',
     director: 'Robert Mulligan',
@@ -801,7 +712,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 90,
     title: 'Dunkirk',
     year: '2017',
     director: 'Christopher Nolan',
@@ -810,7 +720,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 91,
     title: 'Full Metal Jacket',
     year: '1987',
     director: 'Stanley Kubrick',
@@ -819,7 +728,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 92,
     title: '2001: A Space Odyssey',
     year: '1968',
     director: 'Stanley Kubrick',
@@ -828,7 +736,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 93,
     title: "Singin' in the Rain",
     year: '1952',
     director: 'Stanley Donen',
@@ -837,7 +744,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 94,
     title: 'Toy Story 3',
     year: '2010',
     director: 'Lee Unkrich',
@@ -846,7 +752,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 95,
     title: 'Toy Story',
     year: '1995',
     director: 'John Lasseter',
@@ -855,7 +760,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 96,
     title: 'The Sting',
     year: '1973',
     director: 'George Roy Hill',
@@ -864,7 +768,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 97,
     title: '3 Idiots',
     year: '2009',
     director: 'Rajkumar Hirani',
@@ -873,7 +776,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 98,
     title: 'Ladri di biciclette',
     year: '1948',
     director: 'Vittorio De Sica',
@@ -882,7 +784,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 99,
     title: 'Inglourious Basterds',
     year: '2009',
     director: 'Quentin Tarantino',
@@ -891,7 +792,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 100,
     title: 'The Kid',
     year: '1921',
     director: 'Charles Chaplin',
@@ -900,7 +800,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 101,
     title: 'Snatch',
     year: '2000',
     director: 'Guy Ritchie',
@@ -909,7 +808,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 102,
     title: 'Monty Python and the Holy Grail',
     year: '1975',
     director: 'Terry Gilliam',
@@ -918,7 +816,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 103,
     title: 'Good Will Hunting',
     year: '1997',
     director: 'Gus Van Sant',
@@ -927,7 +824,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 104,
     title: 'Jagten',
     year: '2012',
     director: 'Thomas Vinterberg',
@@ -936,7 +832,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 105,
     title: 'Per qualche dollaro in più',
     year: '1965',
     director: 'Sergio Leone',
@@ -945,7 +840,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 106,
     title: 'L.A. Confidential',
     year: '1997',
     director: 'Curtis Hanson',
@@ -954,7 +848,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 107,
     title: 'Scarface',
     year: '1983',
     director: 'Brian De Palma',
@@ -963,7 +856,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 108,
     title: 'The Apartment',
     year: '1960',
     director: 'Billy Wilder',
@@ -972,7 +864,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 109,
     title: 'Metropolis',
     year: '1927',
     director: 'Fritz Lang',
@@ -981,7 +872,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 110,
     title: 'Jodaeiye Nader az Simin',
     year: '2011',
     director: 'Asghar Farhadi',
@@ -990,7 +880,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 111,
     title: 'Rashômon',
     year: '1950',
     director: 'Akira Kurosawa',
@@ -999,7 +888,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 112,
     title: 'Indiana Jones and the Last Crusade',
     year: '1989',
     director: 'Steven Spielberg',
@@ -1008,7 +896,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 113,
     title: 'All About Eve',
     year: '1950',
     director: 'Joseph L. Mankiewicz',
@@ -1017,7 +904,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 114,
     title: 'Yôjinbô',
     year: '1961',
     director: 'Akira Kurosawa',
@@ -1026,7 +912,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 115,
     title: 'Babam ve Oglum',
     year: '2005',
     director: 'Çagan Irmak',
@@ -1035,7 +920,6 @@ export const movieData = [
     rate: '8.5'
   },
   {
-    id: 116,
     title: 'Up',
     year: '2009',
     director: 'Pete Docter',
@@ -1044,7 +928,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 117,
     title: 'Batman Begins',
     year: '2005',
     director: 'Christopher Nolan',
@@ -1053,7 +936,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 118,
     title: 'Some Like It Hot',
     year: '1959',
     director: 'Billy Wilder',
@@ -1062,7 +944,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 119,
     title: 'The Treasure of the Sierra Madre',
     year: '1948',
     director: 'John Huston',
@@ -1071,7 +952,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 120,
     title: 'Unforgiven',
     year: '1992',
     director: 'Clint Eastwood',
@@ -1080,7 +960,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 121,
     title: 'Der Untergang',
     year: '2004',
     director: 'Oliver Hirschbiegel',
@@ -1089,7 +968,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 122,
     title: 'Die Hard',
     year: '1988',
     director: 'John McTiernan',
@@ -1098,7 +976,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 123,
     title: 'Raging Bull',
     year: '1980',
     director: 'Martin Scorsese',
@@ -1107,7 +984,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 124,
     title: 'Heat',
     year: '1995',
     director: 'Michael Mann',
@@ -1116,7 +992,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 125,
     title: 'The Third Man',
     year: '1949',
     director: 'Carol Reed',
@@ -1125,7 +1000,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 126,
     title: 'Bacheha-Ye aseman',
     year: '1997',
     director: 'Majid Majidi',
@@ -1134,7 +1008,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 127,
     title: 'The Great Escape',
     year: '1963',
     director: 'John Sturges',
@@ -1143,7 +1016,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 128,
     title: 'Ikiru',
     year: '1952',
     director: 'Akira Kurosawa',
@@ -1152,7 +1024,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 129,
     title: 'Chinatown',
     year: '1974',
     director: 'Roman Polanski',
@@ -1161,7 +1032,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 130,
     title: 'El laberinto del fauno',
     year: '2006',
     director: 'Guillermo del Toro',
@@ -1170,7 +1040,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 131,
     title: 'Tonari no Totoro',
     year: '1988',
     director: 'Hayao Miyazaki',
@@ -1179,7 +1048,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 132,
     title: 'Incendies',
     year: '2010',
     director: 'Denis Villeneuve',
@@ -1188,7 +1056,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 133,
     title: 'Ran',
     year: '1985',
     director: 'Akira Kurosawa',
@@ -1197,7 +1064,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 134,
     title: 'The Gold Rush',
     year: '1925',
     director: 'Charles Chaplin',
@@ -1206,7 +1072,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 135,
     title: 'El secreto de sus ojos',
     year: '2009',
     director: 'Juan José Campanella',
@@ -1215,7 +1080,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 136,
     title: 'Inside Out',
     year: '2014',
     director: 'Pete Docter',
@@ -1224,7 +1088,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 137,
     title: 'Judgment at Nuremberg',
     year: '1961',
     director: 'Stanley Kramer',
@@ -1233,7 +1096,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 138,
     title: 'On the Waterfront',
     year: '1954',
     director: 'Elia Kazan',
@@ -1242,7 +1104,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 139,
     title: 'Hauru no ugoku shiro',
     year: '2004',
     director: 'Hayao Miyazaki',
@@ -1251,7 +1112,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 140,
     title: 'The Bridge on the River Kwai',
     year: '1957',
     director: 'David Lean',
@@ -1260,7 +1120,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 141,
     title: 'Room',
     year: '2015',
     director: 'Lenny Abrahamson',
@@ -1269,7 +1128,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 142,
     title: 'Det sjunde inseglet',
     year: '1957',
     director: 'Ingmar Bergman',
@@ -1278,7 +1136,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 143,
     title: 'Lock, Stock and Two Smoking Barrels',
     year: '1998',
     director: 'Guy Ritchie',
@@ -1287,7 +1144,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 144,
     title: 'Mr. Smith Goes to Washington',
     year: '1939',
     director: 'Frank Capra',
@@ -1296,7 +1152,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 145,
     title: 'Blade Runner',
     year: '1982',
     director: 'Ridley Scott',
@@ -1305,7 +1160,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 146,
     title: 'Casino',
     year: '1995',
     director: 'Martin Scorsese',
@@ -1314,7 +1168,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 147,
     title: 'A Beautiful Mind',
     year: '2001',
     director: 'Ron Howard',
@@ -1323,7 +1176,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 148,
     title: 'The Elephant Man',
     year: '1980',
     director: 'David Lynch',
@@ -1332,7 +1184,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 149,
     title: 'Smultronstället',
     year: '1957',
     director: 'Ingmar Bergman',
@@ -1341,7 +1192,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 150,
     title: 'V for Vendetta',
     year: '2005',
     director: 'James McTeigue',
@@ -1350,7 +1200,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 151,
     title: 'The Wolf of Wall Street',
     year: '2013',
     director: 'Martin Scorsese',
@@ -1359,7 +1208,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 152,
     title: 'The General',
     year: '1926',
     director: 'Clyde Bruckman',
@@ -1368,7 +1216,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 153,
     title: 'Warrior',
     year: '2011',
     director: "Gavin O'Connor",
@@ -1377,7 +1224,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 154,
     title: 'Trainspotting',
     year: '1996',
     director: 'Danny Boyle',
@@ -1386,7 +1232,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 155,
     title: 'Dial M for Murder',
     year: '1954',
     director: 'Alfred Hitchcock',
@@ -1395,7 +1240,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 156,
     title: 'Gran Torino',
     year: '2008',
     director: 'Clint Eastwood',
@@ -1404,7 +1248,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 157,
     title: 'Sunrise: A Song of Two Humans',
     year: '1927',
     director: 'F.W. Murnau',
@@ -1413,7 +1256,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 158,
     title: 'Gone with the Wind',
     year: '1939',
     director: 'Victor Fleming',
@@ -1422,7 +1264,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 159,
     title: 'Andrey Rublev',
     year: '1966',
     director: 'Andrei Tarkovsky',
@@ -1431,7 +1272,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 160,
     title: 'The Deer Hunter',
     year: '1978',
     director: 'Michael Cimino',
@@ -1440,7 +1280,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 161,
     title: 'Fargo',
     year: '1996',
     director: 'Joel Coen',
@@ -1449,7 +1288,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 162,
     title: 'The Sixth Sense',
     year: '1999',
     director: 'M. Night Shyamalan',
@@ -1458,7 +1296,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 163,
     title: 'The Thing',
     year: '2004',
     director: 'John Carpenter',
@@ -1467,7 +1304,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 164,
     title: 'No Country for Old Men',
     year: '2007',
     director: 'Ethan Coen',
@@ -1476,7 +1312,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 165,
     title: 'The Big Lebowski',
     year: '1998',
     director: 'Joel Coen',
@@ -1485,7 +1320,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 166,
     title: 'Eskiya',
     year: '1996',
     director: 'Yavuz Turgul',
@@ -1494,7 +1328,6 @@ export const movieData = [
     rate: '8.4'
   },
   {
-    id: 167,
     title: 'Finding Nemo',
     year: '2003',
     director: 'Andrew Stanton',
@@ -1503,7 +1336,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 168,
     title: 'Tôkyô monogatari',
     year: '1953',
     director: 'Yasujirô Ozu',
@@ -1512,7 +1344,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 169,
     title: 'There Will Be Blood',
     year: '2007',
     director: 'Paul Thomas Anderson',
@@ -1521,7 +1352,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 170,
     title: 'Cool Hand Luke',
     year: '1967',
     director: 'Stuart Rosenberg',
@@ -1530,7 +1360,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 171,
     title: 'Rebecca',
     year: '1940',
     director: 'Alfred Hitchcock',
@@ -1539,7 +1368,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 172,
     title: 'Hacksaw Ridge',
     year: '2016',
     director: 'Mel Gibson',
@@ -1548,7 +1376,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 173,
     title: 'La La Land',
     year: '2016',
     director: 'Damien Chazelle',
@@ -1557,7 +1384,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 174,
     title: 'Idi i smotri',
     year: '1992',
     director: 'Elem Klimov',
@@ -1566,7 +1392,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 175,
     title: 'Kill Bill: Vol. 1',
     year: '2003',
     director: 'Quentin Tarantino',
@@ -1575,7 +1400,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 176,
     title: 'Rang De Basanti',
     year: '2006',
     director: 'Rakeysh Omprakash Mehra',
@@ -1584,7 +1408,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 177,
     title: 'How to Train Your Dragon',
     year: '2010',
     director: 'Dean DeBlois',
@@ -1593,7 +1416,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 178,
     title: "La passion de Jeanne d'Arc",
     year: '1928',
     director: 'Carl Theodor Dreyer',
@@ -1602,7 +1424,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 179,
     title: 'Mary and Max',
     year: '2009',
     director: 'Adam Elliot',
@@ -1611,7 +1432,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 180,
     title: 'Gone Girl',
     year: '2014',
     director: 'David Fincher',
@@ -1620,7 +1440,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 181,
     title: 'Into the Wild',
     year: '2007',
     director: 'Sean Penn',
@@ -1629,7 +1448,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 182,
     title: 'Shutter Island',
     year: '2010',
     director: 'Martin Scorsese',
@@ -1638,7 +1456,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 183,
     title: 'Logan',
     year: '2017',
     director: 'James Mangold',
@@ -1647,7 +1464,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 184,
     title: 'It Happened One Night',
     year: '1934',
     director: 'Frank Capra',
@@ -1656,7 +1472,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 185,
     title: 'Life of Brian',
     year: '1979',
     director: 'Terry Jones',
@@ -1665,7 +1480,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 186,
     title: 'Relatos salvajes',
     year: '2014',
     director: 'Damián Szifron',
@@ -1674,7 +1488,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 187,
     title: 'A Wednesday',
     year: '2008',
     director: 'Neeraj Pandey',
@@ -1683,7 +1496,6 @@ export const movieData = [
     rate: '8.3'
   },
   {
-    id: 188,
     title: 'Platoon',
     year: '1986',
     director: 'Oliver Stone',
@@ -1692,7 +1504,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 189,
     title: 'Hotel Rwanda',
     year: '2004',
     director: 'Terry George',
@@ -1701,7 +1512,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 190,
     title: 'Le salaire de la peur',
     year: '1953',
     director: 'Henri-Georges Clouzot',
@@ -1710,7 +1520,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 191,
     title: 'Network',
     year: '1976',
     director: 'Sidney Lumet',
@@ -1719,7 +1528,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 192,
     title: 'Rush',
     year: '2013',
     director: 'Ron Howard',
@@ -1728,7 +1536,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 193,
     title: 'In the Name of the Father',
     year: '1993',
     director: 'Jim Sheridan',
@@ -1737,7 +1544,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 194,
     title: 'Stand by Me',
     year: '1986',
     director: 'Rob Reiner',
@@ -1746,7 +1552,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 195,
     title: 'Persona',
     year: '1966',
     director: 'Ingmar Bergman',
@@ -1755,7 +1560,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 196,
     title: 'Ben-Hur',
     year: '1959',
     director: 'William Wyler',
@@ -1764,7 +1568,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 197,
     title: 'The Grand Budapest Hotel',
     year: '2014',
     director: 'Wes Anderson',
@@ -1773,7 +1576,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 198,
     title: 'Les quatre cents coups',
     year: '1959',
     director: 'François Truffaut',
@@ -1782,7 +1584,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 199,
     title: 'Salinui chueok',
     year: '2003',
     director: 'Joon-ho Bong',
@@ -1791,7 +1592,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 200,
     title: '12 Years a Slave',
     year: '2013',
     director: 'Steve McQueen',
@@ -1800,7 +1600,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 201,
     title: 'Mad Max: Fury Road',
     year: '2015',
     director: 'George Miller',
@@ -1809,7 +1608,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 202,
     title: 'Jurassic Park',
     year: '2000',
     director: 'Steven Spielberg',
@@ -1818,7 +1616,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 203,
     title: 'Spotlight',
     year: '2015',
     director: 'Tom McCarthy',
@@ -1827,7 +1624,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 204,
     title: 'Million Dollar Baby',
     year: '2004',
     director: 'Clint Eastwood',
@@ -1836,7 +1632,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 205,
     title: 'Stalker',
     year: '1979',
     director: 'Andrei Tarkovsky',
@@ -1845,7 +1640,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 206,
     title: 'Butch Cassidy and the Sundance Kid',
     year: '1969',
     director: 'George Roy Hill',
@@ -1854,7 +1648,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 207,
     title: 'Amores perros',
     year: '2000',
     director: 'Alejandro González Iñárritu',
@@ -1863,7 +1656,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 208,
     title: 'The Truman Show',
     year: '1990',
     director: 'Peter Weir',
@@ -1872,7 +1664,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 209,
     title: "Hachi: A Dog's Tale",
     year: '1983',
     director: 'Lasse Hallström',
@@ -1881,7 +1672,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 210,
     title: 'The Maltese Falcon',
     year: '1941',
     director: 'John Huston',
@@ -1890,7 +1680,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 211,
     title: 'Kaze no tani no Naushika',
     year: '1984',
     director: 'Hayao Miyazaki',
@@ -1899,7 +1688,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 212,
     title: 'The Princess Bride',
     year: '1987',
     director: 'Rob Reiner',
@@ -1908,7 +1696,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 213,
     title: 'Before Sunrise',
     year: '1995',
     director: 'Richard Linklater',
@@ -1917,7 +1704,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 214,
     title: 'Le notti di Cabiria',
     year: '1957',
     director: 'Federico Fellini',
@@ -1926,7 +1712,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 215,
     title: 'Paper Moon',
     year: '1973',
     director: 'Peter Bogdanovich',
@@ -1935,7 +1720,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 216,
     title: 'Prisoners',
     year: '2013',
     director: 'Denis Villeneuve',
@@ -1944,7 +1728,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 217,
     title: 'Harry Potter and the Deathly Hallows: Part 2',
     year: '2011',
     director: 'David Yates',
@@ -1953,7 +1736,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 218,
     title: 'The Grapes of Wrath',
     year: '1940',
     director: 'John Ford',
@@ -1962,7 +1744,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 219,
     title: 'Rocky',
     year: '1976',
     director: 'John G. Avildsen',
@@ -1971,7 +1752,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 220,
     title: 'Catch Me If You Can',
     year: '2002',
     director: 'Steven Spielberg',
@@ -1980,7 +1760,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 221,
     title: 'Touch of Evil',
     year: '1958',
     director: 'Orson Welles',
@@ -1989,7 +1768,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 222,
     title: 'Les diaboliques',
     year: '1955',
     director: 'Henri-Georges Clouzot',
@@ -1998,7 +1776,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 223,
     title: 'Gandhi',
     year: '1982',
     director: 'Richard Attenborough',
@@ -2007,7 +1784,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 224,
     title: 'Donnie Darko',
     year: '2001',
     director: 'Richard Kelly',
@@ -2016,7 +1792,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 225,
     title: 'Munna Bhai M.B.B.S.',
     year: '2003',
     director: 'Rajkumar Hirani',
@@ -2025,7 +1800,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 226,
     title: 'Monsters, Inc.',
     year: '2001',
     director: 'Pete Docter',
@@ -2034,7 +1808,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 227,
     title: 'Star Wars: Episode VII - The Force Awakens',
     year: '2015',
     director: 'J.J. Abrams',
@@ -2043,7 +1816,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 228,
     title: 'Annie Hall',
     year: '1977',
     director: 'Woody Allen',
@@ -2052,7 +1824,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 229,
     title: 'The Terminator',
     year: '1984',
     director: 'James Cameron',
@@ -2061,7 +1832,6 @@ export const movieData = [
     rate: '8.0'
   },
   {
-    id: 230,
     title: 'Barry Lyndon',
     year: '1975',
     director: 'Stanley Kubrick',
@@ -2070,7 +1840,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 231,
     title: 'The Bourne Ultimatum',
     year: '2007',
     director: 'Paul Greengrass',
@@ -2079,7 +1848,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 232,
     title: 'The Wizard of Oz',
     year: '1939',
     director: 'Victor Fleming',
@@ -2088,7 +1856,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 233,
     title: 'Groundhog Day',
     year: '1993',
     director: 'Harold Ramis',
@@ -2097,7 +1864,6 @@ export const movieData = [
     rate: '8.0'
   },
   {
-    id: 234,
     title: 'La haine',
     year: '1995',
     director: 'Mathieu Kassovitz',
@@ -2106,7 +1872,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 235,
     title: '8½',
     year: '1963',
     director: 'Federico Fellini',
@@ -2115,7 +1880,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 236,
     title: 'Jaws',
     year: '1975',
     director: 'Steven Spielberg',
@@ -2124,7 +1888,6 @@ export const movieData = [
     rate: '8.0'
   },
   {
-    id: 237,
     title: 'Twelve Monkeys',
     year: '1995',
     director: 'Terry Gilliam',
@@ -2133,7 +1896,6 @@ export const movieData = [
     rate: '8.0'
   },
   {
-    id: 238,
     title: 'The Best Years of Our Lives',
     year: '1946',
     director: 'William Wyler',
@@ -2142,7 +1904,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 239,
     title: 'Mou gaan dou',
     year: '2002',
     director: 'Wai-Keung Lau',
@@ -2151,7 +1912,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 240,
     title: 'Paris, Texas',
     year: '1984',
     director: 'Wim Wenders',
@@ -2160,7 +1920,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 241,
     title: 'The Help',
     year: '2011',
     director: 'Tate Taylor',
@@ -2169,7 +1928,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 242,
     title: 'Faa yeung nin wa',
     year: '2000',
     director: 'Kar-Wai Wong',
@@ -2178,7 +1936,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 243,
     title: 'Sholay',
     year: '1975',
     director: 'Ramesh Sippy',
@@ -2187,7 +1944,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 244,
     title: 'Beauty and the Beast',
     year: '1991',
     director: 'Gary Trousdale',
@@ -2196,7 +1952,6 @@ export const movieData = [
     rate: '8.0'
   },
   {
-    id: 245,
     title: 'La battaglia di Algeri',
     year: '1966',
     director: 'Gillo Pontecorvo',
@@ -2205,7 +1960,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 246,
     title: 'Ah-ga-ssi',
     year: '2016',
     director: 'Chan-wook Park',
@@ -2214,7 +1968,6 @@ export const movieData = [
     rate: '8.1'
   },
   {
-    id: 247,
     title: 'Pirates of the Caribbean: The Curse of the Black Pearl',
     year: '2003',
     director: 'Gore Verbinski',
@@ -2223,7 +1976,6 @@ export const movieData = [
     rate: '8.0'
   },
   {
-    id: 248,
     title: 'PK',
     year: '2014',
     director: 'Rajkumar Hirani',
@@ -2232,7 +1984,6 @@ export const movieData = [
     rate: '8.2'
   },
   {
-    id: 249,
     title: 'Dog Day Afternoon',
     year: '1975',
     director: 'Sidney Lumet',
@@ -2241,7 +1992,6 @@ export const movieData = [
     rate: '8.0'
   },
   {
-    id: 250,
     title: 'Dead Poets Society',
     year: '1989',
     director: 'Peter Weir',

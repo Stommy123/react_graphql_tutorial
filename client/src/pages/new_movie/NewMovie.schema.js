@@ -1,3 +1,5 @@
+import { GENRES } from '../../constants';
+
 export const schema = {
   id: 'movieForm',
   formHeading: 'Create a new movie!',
@@ -9,7 +11,7 @@ export const schema = {
       id: 'title',
       placeholder: 'title',
       widget: 'input',
-      required: true,
+      required: true
     },
     {
       label: 'Director',
@@ -17,7 +19,7 @@ export const schema = {
       id: 'director',
       placeholder: 'Director',
       widget: 'input',
-      required: true,
+      required: true
     },
     {
       id: 'genre',
@@ -27,27 +29,7 @@ export const schema = {
       placeholder: 'Genre',
       widget: 'select',
       required: true,
-      options: [
-        { value: 'Action', label: 'Action' },
-        { value: 'Adventure', label: 'Adventure' },
-        { value: 'Animation', label: 'Animation' },
-        { value: 'Biography', label: 'Biography' },
-        { value: 'Comedy', label: 'Comedy' },
-        { value: 'Crime', label: 'Crime' },
-        { value: 'Drama', label: 'Drama' },
-        { value: 'Family', label: 'Family' },
-        { value: 'Fantasy', label: 'Fantasy' },
-        { value: 'History', label: 'History' },
-        { value: 'Horror', label: 'Horror' },
-        { value: 'Music', label: 'Music' },
-        { value: 'Musical', label: 'Musical' },
-        { value: 'Mystery', label: 'Mystery' },
-        { value: 'Romance', label: 'Romance' },
-        { value: 'Sci-Fi', label: 'Sci-Fi' },
-        { value: 'Thriller', label: 'Thriller' },
-        { value: 'War', label: 'War' },
-        { value: 'Western', label: 'Western' },
-      ]
+      options: GENRES
     },
     {
       label: 'Year',
@@ -55,14 +37,14 @@ export const schema = {
       id: 'year',
       placeholder: 'Year',
       widget: 'input',
-      required: true,
+      required: true
     },
     {
       label: 'Rate',
       type: 'text',
       id: 'rate',
       placeholder: 'Rate',
-      widget: 'input',
-    },
+      widget: 'input'
+    }
   ]
 };
