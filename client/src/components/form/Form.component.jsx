@@ -3,7 +3,7 @@ import { FormGroup } from "..";
 
 const Form = ({ schema: { id, fields = [], formHeading, submitText } = {}, handleSubmit }) => {
   const initialState = fields.reduce((acc, field) => {
-    acc[field.id] = String();
+    acc[field.id] = field.multiSelect ? [] : String();
     return acc;
   }, {});
   const formReducer = (state, payload) => ({ ...state, ...payload });
@@ -11,13 +11,18 @@ const Form = ({ schema: { id, fields = [], formHeading, submitText } = {}, handl
   const handleInputChange = ({ id, value }) => setState({ [id]: value });
   const onSubmit = e => {
     e.preventDefault();
-    handleSubmit(state);
+    const formData = Object.keys(state).reduce((acc, id) => {
+      const value = state[id]
+      state[id] && Object.assign(acc, { [id]: value })
+      return acc;
+    }, {})
+    handleSubmit(formData);
   };
   return (
     <form onSubmit={onSubmit} id={id}>
       <h1 className="display-4 m-b-2">{formHeading}</h1>
       {fields.map(field => (
-        <FormGroup {...field} onChange={handleInputChange} value={state[field.id]} />
+        <FormGroup key={field.id} {...field} onChange={handleInputChange} value={state[field.id]} />
       ))}
       <button className="btn btn-primary" type="submit">
         {submitText}

@@ -16,6 +16,9 @@ const Navigation = _ => (
           <NavLink className="nav-item nav-link" to="/search">
             Search Movie
           </NavLink>
+          <NavLink className="nav-item nav-link" to="/new_movie">
+            New Movie
+          </NavLink>
         </div>
       </div>
     </div>

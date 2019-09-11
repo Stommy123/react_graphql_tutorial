@@ -2,7 +2,6 @@ import React from "react";
 import classNames from "classnames";
 
 const InputDropdown = ({
-  type,
   label,
   placeholder,
   id,

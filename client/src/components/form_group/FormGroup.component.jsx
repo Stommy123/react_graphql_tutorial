@@ -1,16 +1,15 @@
 import React from "react";
-import { Input, InputDropdown, InputGroup, FileInput, TextArea } from "./wigets";
+import { Input, InputDropdown, InputGroup, Select } from "./widgets";
 const FormGroup = props => {
   const Component = {
     input: Input,
     dropdown: InputDropdown,
     group: InputGroup,
-    file: FileInput,
-    text: TextArea,
+    select: Select,
   }[props.widget];
   return (
     <div className="form-group">
-      <Component {...props} />
+      <Component key={props.id} formGroup {...props} />
     </div>
   );
 };

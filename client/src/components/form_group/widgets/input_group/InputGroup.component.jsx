@@ -1,20 +1,20 @@
 import React, { useReducer } from "react";
 import { Input } from "..";
 
-const InputGroup = ({ id, type, label, onChange, classes = [], defaultValue, group = [], multiSelect }) => {
+const InputGroup = ({ id, type, label, onChange, classes = [], defaultValue, group = [], isMulti }) => {
   const initialState = { selected: defaultValue, selections: [] };
   const radioGroupReducer = (state, payload) => ({ ...state, ...payload });
   const [state, setState] = useReducer(radioGroupReducer, initialState);
   const { selected, selections } = state;
   const handleSelect = ({ id: inputId, value }) => {
     let newSelection = selections;
-    if (multiSelect) {
+    if (isMulti) {
       const alreadySelected = selections.includes(inputId);
       if (alreadySelected) newSelection = selections.filter(el => el !== inputId);
       else newSelection.push(inputId);
     }
-    setState({ selected: inputId, ...(multiSelect && { selections: newSelection }) });
-    onChange && onChange({ id, value: multiSelect ? newSelection : value });
+    setState({ selected: inputId, ...(isMulti && { selections: newSelection }) });
+    onChange && onChange({ id, value: isMulti ? newSelection : value });
   };
   return (
     <div>
@@ -25,7 +25,7 @@ const InputGroup = ({ id, type, label, onChange, classes = [], defaultValue, gro
           value={value}
           id={inputId}
           onChange={handleSelect}
-          isChecked={multiSelect ? selections.includes(inputId) : selected === inputId}
+          isChecked={isMulti ? selections.includes(inputId) : selected === inputId}
           type={type}
           classes={classes}
           selected={selected}

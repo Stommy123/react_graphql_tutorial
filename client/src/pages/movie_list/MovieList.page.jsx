@@ -14,7 +14,7 @@ const MovieList = _ => {
   return (
     <SectionWrapper>
       {movies.map(({ _id, title, rate }) => (
-        <div>
+        <div key={_id} >
           <Link to={`/movie/${_id}`}> 
             {title} - {rate}
           </Link>

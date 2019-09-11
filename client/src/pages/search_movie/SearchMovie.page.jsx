@@ -6,7 +6,7 @@ import { SectionWrapper, MovieDetails, Search } from '../../components';
 const SearchMovie = ({ client }) => {
   const [featuredMovie, setFeaturedMovie] = useState(null)
   const [inputValue, setInputValue] = useState(String())
-  const handleChange = ({ data }) => setFeaturedMovie(data);
+  const handleChange = ({ value }) => setFeaturedMovie(value.data);
   const handleInputChange = input => {
     setInputValue(input)
     return input;
@@ -23,10 +23,11 @@ const SearchMovie = ({ client }) => {
   return (
     <SectionWrapper>
       <Search
-        handleChange={handleChange}
-        handleInputChange={handleInputChange}
+        onChange={handleChange}
+        onInputChange={handleInputChange}
         loadOptions={loadOptions}
         inputValue={inputValue}
+        async
       />
       {featuredMovie && <MovieDetails {...featuredMovie} />}
     </SectionWrapper>
