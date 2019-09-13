@@ -19,7 +19,11 @@ const Query = {
 }
 
 const Mutation = {
-  createMovie: async (_, { input }) => await Movie.create(input),
+  createMovie: async (_, { input }) => {
+    const parsedGenres = input.genre && input.genre.map(g => genreMapper(g))
+    const newMovieData = { ...input, ...(parsedGenres && { genre: parsedGenres }) }
+    return await Movie.create(newMovieData)
+  },
   deleteMovie: async (_, { _id }) => {
     const { deletedCount } = (await Movie.deleteOne({ _id })) || {}
     const [success, status, message] = deletedCount === 1 

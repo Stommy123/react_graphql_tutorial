@@ -10,10 +10,10 @@ const NewMovie = ({ history, client }) => {
   const { setModal } = useContext(ModalContext);
   const handleSubmit = async formData => {
     try {
-      const parsedGenres = formData.genre && formData.genre.map(({ value }) => value)
+      const input = { ...formData, duration: '2h15min' }
       const { data = {} } = await client.mutate({
         mutation: CreateMovie,
-        variables: { input: { ...formData, ...(parsedGenres && { genre: parsedGenres }), duration: '2h15min' } }
+        variables: { input }
       })
       const newMovie = data.createMovie || {}
       history.push(`/movie/${newMovie._id}`)

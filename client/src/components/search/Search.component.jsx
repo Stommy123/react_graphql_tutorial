@@ -21,7 +21,8 @@ const Search = ({
   const handleFocus = _ => setActive(true);
   const handleBlur = _ => setActive(false);
   const handleInputChange = input => onInputChange && onInputChange(input);
-  const handleChange = value => {
+  const handleChange = selection => {
+    const value = isMulti ? selection.map(({ value }) => value) : selection;
     onChange && onChange({ id, value });
     selectRef.current.blur();
   };

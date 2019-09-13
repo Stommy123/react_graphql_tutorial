@@ -12,13 +12,15 @@ const SearchMovie = ({ client }) => {
     return input;
   };
   const loadOptions = async title => {
-    const { data: { movies = [] } = {} } = await client.query({
-      query: FetchMovies,
-      variables: {
-        where: { title }
-      }
-    });
-    return movies.map((movie = {}) => ({ label: movie.title, value: movie._id, data: movie }));
+    try {
+      const { data = {} } = await client.query({
+        query: FetchMovies,
+        variables: { where: { title } }
+      });
+      return (data.movies || []).map((movie = {}) => ({ label: movie.title, value: movie._id, data: movie }));
+    } catch (e) {
+      console.log('error fetching movies', e);
+    }
   };
   return (
     <SectionWrapper>
