@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import { Input } from "..";
 
-const InputGroup = ({ id, type, label, onChange, classes = [], defaultValue, group = [], isMulti }) => {
+const InputGroup = ({ id, type, label, onChange, className, defaultValue, group = [], isMulti }) => {
   const initialState = { selected: defaultValue, selections: [] };
   const radioGroupReducer = (state, payload) => ({ ...state, ...payload });
   const [state, setState] = useReducer(radioGroupReducer, initialState);
@@ -27,7 +27,7 @@ const InputGroup = ({ id, type, label, onChange, classes = [], defaultValue, gro
           onChange={handleSelect}
           isChecked={isMulti ? selections.includes(inputId) : selected === inputId}
           type={type}
-          classes={classes}
+          className={className}
           selected={selected}
         />
       ))}

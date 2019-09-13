@@ -1,14 +1,15 @@
 import React from 'react';
+import classNames from 'classnames';
 import { FormGroup } from '..';
 
-const Filters = ({ filterType = [], filtersToApply, handleFilterChange, applyFilters, clearFilter }) => {
+const Filters = ({ filterType = [], filtersToApply, handleFilterChange, applyFilters, clearFilter, className }) => {
   const handleChange = input => handleFilterChange(input);
   return (
     <div>
-      <div className="filters">
+      <div className={classNames('filters', className)}>
         {filterType.map(filter => (
           <FormGroup
-            classes={['filter-widget']}
+            className='filter-widget'
             key={filter.id}
             {...filter}
             onChange={handleChange}

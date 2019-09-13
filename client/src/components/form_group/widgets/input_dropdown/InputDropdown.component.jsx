@@ -8,7 +8,7 @@ const InputDropdown = ({
   value,
   onChange,
   required,
-  classes = [],
+  className,
   defaultValue,
   options = []
 }) => (
@@ -21,10 +21,10 @@ const InputDropdown = ({
       placeholder={placeholder}
       value={value}
       required={required}
-      className={classNames("form-control", ...classes)}
+      className={classNames("form-control", className)}
     >
       {options.map(({ id, display, value }) => (
-        <option className={classNames("form-control", ...classes)} id={id} value={value}>
+        <option className={classNames("form-control", className)} id={id} value={value}>
           {display}
         </option>
       ))}

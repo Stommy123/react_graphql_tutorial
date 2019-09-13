@@ -9,7 +9,7 @@ const Input = ({
   value,
   onChange,
   required,
-  classes = [],
+  className,
   defaultValue,
   defaultChecked,
   isChecked
@@ -18,7 +18,7 @@ const Input = ({
     <label>{label}</label>
     <input
       id={id}
-      className={classNames("form-control", ...classes)}
+      className={classNames("form-control", className)}
       required={required}
       type={type}
       checked={isChecked}

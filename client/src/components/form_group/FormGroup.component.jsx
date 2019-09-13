@@ -1,5 +1,6 @@
 import React from 'react';
 import { Input, InputDropdown, InputGroup, Select } from './widgets';
+
 const FormGroup = props => {
   const Component = {
     input: Input,

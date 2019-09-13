@@ -14,7 +14,7 @@ const Search = ({
   label,
   placeholder,
   options = [],
-  classes = []
+  className,
 }) => {
   const selectRef = useRef(null);
   const [active, setActive] = useState(false);
@@ -46,7 +46,7 @@ const Search = ({
         components={customComponents()}
         customStyles={customStyles()}
         classNamePrefix="select"
-        className={classNames('react-select', ...classes, { active })}
+        className={classNames('react-select', className, { active })}
         noOptionsMessage={emptyOptions}
         isSearchable
         isMulti={isMulti}

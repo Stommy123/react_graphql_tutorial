@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import { FormGroup } from "..";
 
-const Form = ({ schema: { id, fields = [], formHeading, submitText } = {}, handleSubmit }) => {
+const Form = ({ className, schema: { id, fields = [], formHeading, submitText } = {}, handleSubmit }) => {
   const initialState = fields.reduce((acc, field) => {
     acc[field.id] = field.multiSelect ? [] : String();
     return acc;
@@ -19,7 +19,7 @@ const Form = ({ schema: { id, fields = [], formHeading, submitText } = {}, handl
     handleSubmit(formData);
   };
   return (
-    <form onSubmit={onSubmit} id={id}>
+    <form className={className} onSubmit={onSubmit} id={id}>
       <h1 className="display-4 m-b-2">{formHeading}</h1>
       {fields.map(field => (
         <FormGroup key={field.id} {...field} onChange={handleInputChange} value={state[field.id]} />

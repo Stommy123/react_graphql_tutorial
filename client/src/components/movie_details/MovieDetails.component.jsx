@@ -1,7 +1,8 @@
 import React from 'react';
+import classNames from 'classnames';
 
-const MovieDetails = ({ title, director, year, genre = [], rate }) => (
-  <div className="movie-details">
+const MovieDetails = ({ className, title, director, year, genre = [], rate }) => (
+  <div className={classNames('movie-details', className)}>
     <p>Title: {title}</p>
     <p>Director: {director} </p>
     <p>Year: {year}</p>
