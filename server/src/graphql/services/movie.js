@@ -1,12 +1,12 @@
 import { Movie } from '../../models';
-import { genreMapper } from '../../utilities';
+import { parseGenres } from '../../utilities';
 
 class MovieService {
   static getMovieById = async _id => await Movie.findById(_id);
 
   static getMovies = async where => {
     const { title, director, genre, ...whereClause } = where;
-    const parsedGenres = genre && genre.map(g => genreMapper(g));
+    const parsedGenres = genre && parseGenres(genre);
     const parsedTitle = title && new RegExp(title, 'i');
     const parsedDirector = director && new RegExp(director, 'i');
     const variables = {
@@ -19,8 +19,9 @@ class MovieService {
   };
 
   static createMovie = async input => {
-    const parsedGenres = input.genre && input.genre.map(g => genreMapper(g));
-    const newMovieData = { ...input, ...(parsedGenres && { genre: parsedGenres }) };
+    const { genre, ...movieInput } = input;
+    const parsedGenres = genre && parseGenres(genre);
+    const newMovieData = { ...movieInput, ...(parsedGenres && { genre: parsedGenres }) };
     return await Movie.create(newMovieData);
   };
 

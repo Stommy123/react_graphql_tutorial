@@ -7,17 +7,15 @@ import { filterTypes } from './MovieList.schema';
 const MovieList = _ => {
   const [movies, setMovies] = useState([]);
   const [activeFilters, setActiveFilters] = useState({});
-  const [filtersToApply, setFiltersToApply] = useState({});
   const { data = {}, loading } = useQuery(FetchMovies, {
-    variables: { where: activeFilters },
+    variables: { where: { ...activeFilters } },
     fetchPolicy: 'network-only'
   });
-  const handleFilterChange = ({ id, value }) => setFiltersToApply({ ...filtersToApply, [id]: value });
-  const applyFilters = _ => setActiveFilters(filtersToApply);
-  const clearFilter = _ => {
-    setActiveFilters({});
-    setFiltersToApply({});
+  const applyFilters = ({ genre, ...filtersToApply }) => {
+    const parsedGenres = genre && genre.map(({ value }) => value);
+    setActiveFilters({ ...filtersToApply, ...(parsedGenres && { genre: parsedGenres }) });
   };
+  const clearFilter = _ => setActiveFilters({});
   useEffect(
     _ => {
       !loading && setMovies(data.movies || []);
@@ -26,13 +24,7 @@ const MovieList = _ => {
   );
   return (
     <SectionWrapper>
-      <Filters
-        filterType={filterTypes}
-        filtersToApply={filtersToApply}
-        handleFilterChange={handleFilterChange}
-        applyFilters={applyFilters}
-        clearFilter={clearFilter}
-      />
+      <Filters filterType={filterTypes} onApplyFilters={applyFilters} onClearFilters={clearFilter} />
       {movies.length ? (
         <List movies={movies} />
       ) : (

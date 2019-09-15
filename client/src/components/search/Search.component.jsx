@@ -15,14 +15,14 @@ const Search = ({
   placeholder,
   options = [],
   className,
+  value
 }) => {
   const selectRef = useRef(null);
   const [active, setActive] = useState(false);
   const handleFocus = _ => setActive(true);
   const handleBlur = _ => setActive(false);
   const handleInputChange = input => onInputChange && onInputChange(input);
-  const handleChange = selection => {
-    const value = isMulti ? selection.map(({ value }) => value) : selection;
+  const handleChange = value => {
     onChange && onChange({ id, value });
     selectRef.current.blur();
   };
@@ -56,6 +56,7 @@ const Search = ({
         onBlur={handleBlur}
         onInputChange={handleInputChange}
         onChange={handleChange}
+        value={value}
       />
     </>
   );

@@ -16,24 +16,27 @@ export const constCase = string => {
   }, String());
 };
 
-export const genreMapper = genre =>  ({
-  ACTION: 'Action',
-  ADVENTURE: 'Adventure',
-  ANIMATION: 'Animation',
-  BIOGRAPHY: 'Biography',
-  COMEDY: 'Comedy',
-  CRIME: 'Crime',
-  DRAMA: 'Drama',
-  FAMILY: 'Family',
-  FANTASY: 'Fantasy',
-  HISTORY: 'History',
-  HORROR: 'Horror',
-  MUSIC: 'Music',
-  MUSICAL: 'Musical',
-  MYSTERY: 'Mystery',
-  ROMANCE: 'Romance',
-  SCI_FI: 'Sci-Fi',
-  THRILLER: 'Thriller',
-  WAR: 'War',
-  WESTERN: 'Western',
-}[genre])
+export const genreMapper = genre =>
+  ({
+    ACTION: 'Action',
+    ADVENTURE: 'Adventure',
+    ANIMATION: 'Animation',
+    BIOGRAPHY: 'Biography',
+    COMEDY: 'Comedy',
+    CRIME: 'Crime',
+    DRAMA: 'Drama',
+    FAMILY: 'Family',
+    FANTASY: 'Fantasy',
+    HISTORY: 'History',
+    HORROR: 'Horror',
+    MUSIC: 'Music',
+    MUSICAL: 'Musical',
+    MYSTERY: 'Mystery',
+    ROMANCE: 'Romance',
+    SCI_FI: 'Sci-Fi',
+    THRILLER: 'Thriller',
+    WAR: 'War',
+    WESTERN: 'Western'
+  }[genre]);
+
+export const parseGenres = genres => genres.map(g => genreMapper(g)).sort((a, b) => a.localeCompare(b));
