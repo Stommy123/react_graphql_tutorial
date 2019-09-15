@@ -1,16 +1,16 @@
 import express from 'express';
-import dotenv from 'dotenv';
-import express_graphql from 'express-graphql';
-import mongoose from 'mongoose';
+import { ApolloServer } from 'apollo-server-express';
 import session from 'express-session';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 import connectMongo from 'connect-mongo';
-import { schema } from './graphql';
+import { typeDefs } from './graphql/types';
+import { rootResolver as resolvers } from './graphql/resolvers/';
 
 dotenv.config();
-const MONGO_DB = process.env.DB;
 
 const app = express();
-mongoose.connect(MONGO_DB);
+mongoose.connect(process.env.DB);
 const db = mongoose.connection;
 const MongoStore = connectMongo(session);
 
@@ -23,14 +23,10 @@ app.use(
   })
 );
 
-app.use(
-  '/graphql',
-  express_graphql({
-    schema,
-    graphiql: true
-  })
-);
+const server = new ApolloServer({ typeDefs, resolvers, playground: true });
+
+server.applyMiddleware({ app });
 
 const PORT = process.env.PORT || 4000;
 
-app.listen(PORT, _ => console.log('Server is running on port 4000'));
+app.listen(PORT, _ => console.log(`Listening on port ${PORT}/graphql`));

@@ -1,3 +1,3 @@
 import Movie from './movie';
 
-export const typeDefs = [...Movie];
+export const typeDefs = [Movie];

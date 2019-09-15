@@ -1,18 +1,6 @@
-const Query = `
-  type Query {
-    movie(_id: String!): Movie
-    movies(where: MovieWhereInput): [Movie]
-  }
-`;
+import { gql } from 'apollo-server-express';
 
-const Mutation = `
-  type Mutation {
-    createMovie(input: NewMovieInput!): Movie
-    deleteMovie(_id: String!): DeleteMovieResponse
-  }
-`;
-
-const Type = `
+export default gql`
   type Movie {
     _id: String
     title: String
@@ -22,9 +10,17 @@ const Type = `
     genre: [String]
     rate: String
   }
-`;
 
-const Input = `
+  type Query {
+    movie(_id: String!): Movie
+    movies(where: MovieWhereInput): [Movie]
+  }
+
+  type Mutation {
+    createMovie(input: NewMovieInput!): Movie
+    deleteMovie(_id: String!): DeleteMovieResponse
+  }
+
   input MovieWhereInput {
     title: String
     year: String
@@ -32,24 +28,20 @@ const Input = `
     genre: [Genre]
   }
   input NewMovieInput {
-    title: String!, 
-    year: String!, 
-    director: String!, 
-    duration: String!, 
-    genre: [String]!,
-    rate: String,
+    title: String!
+    year: String!
+    director: String!
+    duration: String!
+    genre: [String]!
+    rate: String
   }
-`
 
-const Response = `
   type DeleteMovieResponse {
     success: Boolean
     status: Int
     message: String
   }
-`
 
-const Enum = `
   enum Genre {
     ACTION
     ADVENTURE
@@ -62,7 +54,7 @@ const Enum = `
     FANTASY
     HISTORY
     HORROR
-    MUSIC 
+    MUSIC
     MUSICAL
     MYSTERY
     ROMANCE
@@ -72,5 +64,3 @@ const Enum = `
     WESTERN
   }
 `;
-
-export default [Query, Mutation, Type, Input, Response, Enum];

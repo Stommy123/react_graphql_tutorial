@@ -1,37 +1,13 @@
-import { Movie } from '../../models';
-import { genreMapper } from '../../utilities';
+import { MovieService } from '../services';
 
 const Query = {
-  movie: async (_, { _id }) => await Movie.findById(_id),
-  movies: async (_, { where = {} }) => {
-    const { title, director, genre, ...whereClause } = where
-    const parsedGenres = genre && genre.map(g => genreMapper(g))
-    const parsedTitle = title && new RegExp(title, 'i');
-    const parsedDirector = director && new RegExp(director, 'i')
-    const variables = { 
-      ...whereClause,
-      ...(parsedTitle && { title: parsedTitle }),
-      ...(parsedDirector && { director: parsedDirector }),
-      ...(parsedGenres && { genre: parsedGenres.length > 1 ? parsedGenres : parsedGenres[0] })
-    }
-    return await Movie.find(variables);
-  }
-}
+  movie: async (_, { _id }) => await MovieService.getMovieById(_id),
+  movies: async (_, { where = {} }) => await MovieService.getMovies(where)
+};
 
 const Mutation = {
-  createMovie: async (_, { input }) => {
-    const parsedGenres = input.genre && input.genre.map(g => genreMapper(g))
-    const newMovieData = { ...input, ...(parsedGenres && { genre: parsedGenres }) }
-    return await Movie.create(newMovieData)
-  },
-  deleteMovie: async (_, { _id }) => {
-    const { deletedCount } = (await Movie.deleteOne({ _id })) || {}
-    const [success, status, message] = deletedCount === 1 
-    ? [true, 200, 'Movie successfully deleted']
-    : [false, 500, 'Could not find movie to delete'] 
-    return { success, status, message }
-    
-  }
-}
+  createMovie: async (_, { input = {} }) => await MovieService.createMovie(input),
+  deleteMovie: async (_, { _id }) => await MovieService.deleteMovie(_id)
+};
 
 export default { Query, Mutation };
