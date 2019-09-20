@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useQuery } from 'react-apollo-hooks';
+import { useQuery } from 'react-apollo';
 import { FetchMovies } from '../../graphql/queries';
 import { SectionWrapper, List, Filters, EmptyContent } from '../../components';
 import { filterTypes } from './MovieList.schema';

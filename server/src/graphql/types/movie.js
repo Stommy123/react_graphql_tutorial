@@ -14,6 +14,7 @@ export default gql`
   type Query {
     movie(_id: String!): Movie
     movies(where: MovieWhereInput): [Movie]
+    randomMovie: Movie
   }
 
   type Mutation {

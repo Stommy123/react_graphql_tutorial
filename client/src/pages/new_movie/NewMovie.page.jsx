@@ -1,20 +1,18 @@
 import React, { useContext } from 'react';
-import { withApollo } from 'react-apollo';
+import { useMutation } from 'react-apollo';
 import { ModalContext } from '../../context';
 import { CreateMovie } from '../../graphql/mutations';
 import { Form, SectionWrapper } from '../../components';
 import { schema } from './NewMovie.schema';
 
-const NewMovie = ({ history, client }) => {
+const NewMovie = ({ history }) => {
   const { setModal } = useContext(ModalContext);
+  const [executeMutation] = useMutation(CreateMovie);
   const handleSubmit = async ({ genre, ...inputData }) => {
     try {
       const parsedGenres = genre && genre.map(({ value }) => value);
       const input = { ...inputData, ...(parsedGenres && { genre: parsedGenres }), duration: '2h15min' };
-      const { data = {} } = await client.mutate({
-        mutation: CreateMovie,
-        variables: { input }
-      });
+      const { data = {} } = await executeMutation({ variables: { input } });
       const newMovie = data.createMovie || {};
       history.push(`/movie/${newMovie._id}`);
     } catch (e) {
@@ -29,4 +27,4 @@ const NewMovie = ({ history, client }) => {
   );
 };
 
-export default withApollo(NewMovie);
+export default NewMovie;

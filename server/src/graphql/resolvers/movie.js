@@ -2,7 +2,8 @@ import { MovieService } from '../services';
 
 const Query = {
   movie: async (_, { _id }) => await MovieService.getMovieById(_id),
-  movies: async (_, { where = {} }) => await MovieService.getMovies(where)
+  movies: async (_, { where = {} }) => await MovieService.getMovies(where),
+  randomMovie: async _ => await MovieService.getRandomMovie()
 };
 
 const Mutation = {

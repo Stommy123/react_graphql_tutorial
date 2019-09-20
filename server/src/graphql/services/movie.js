@@ -18,6 +18,11 @@ class MovieService {
     return await Movie.find(variables);
   };
 
+  static getRandomMovie = async _ => {
+    const [movie] = await Movie.aggregate([{ $sample: { size: 1 } }]);
+    return movie;
+  };
+
   static createMovie = async input => {
     const { genre, ...movieInput } = input;
     const parsedGenres = genre && parseGenres(genre);
