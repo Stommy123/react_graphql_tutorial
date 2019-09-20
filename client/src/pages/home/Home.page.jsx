@@ -8,7 +8,6 @@ const Home = _ => {
   const [executeQuery, { loading, called, data = {} }] = useLazyQuery(FetchRandomMovie, {
     fetchPolicy: 'network-only'
   });
-  const randomizeMovie = _ => executeQuery();
   useEffect(
     _ => {
       !loading && called && setMovie(data.randomMovie);
@@ -21,7 +20,7 @@ const Home = _ => {
       <p className="lead">
         Check out each route for different examples! Or in a hurry? Just press the button to get a random movie
       </p>
-      <button onClick={randomizeMovie} className="btn btn-info-outline btn-lg m-t-1">
+      <button onClick={executeQuery} className="btn btn-info-outline btn-lg m-t-1">
         Randomize Movie
       </button>
       {movie && <MovieDetails {...movie} />}
