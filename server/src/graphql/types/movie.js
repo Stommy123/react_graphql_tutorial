@@ -26,14 +26,14 @@ export default gql`
     title: String
     year: String
     director: String
-    genre: [Genre]
+    genre: [GenreEnum]
   }
   input NewMovieInput {
     title: String!
     year: String!
     director: String!
     duration: String!
-    genre: [Genre]!
+    genre: [GenreEnum]!
     rate: String
   }
 
@@ -43,7 +43,7 @@ export default gql`
     message: String
   }
 
-  enum Genre {
+  enum GenreEnum {
     ACTION
     ADVENTURE
     ANIMATION
