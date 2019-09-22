@@ -16,6 +16,8 @@ export const constCase = string => {
   }, String());
 };
 
+export const isArray = a => Object.prototype.toString.call(a) == "[object Array]";
+
 export const genreMapper = genre =>
   ({
     ACTION: 'Action',
@@ -39,4 +41,4 @@ export const genreMapper = genre =>
     WESTERN: 'Western'
   }[genre]);
 
-export const parseGenres = genres => genres.map(g => genreMapper(g)).sort((a, b) => a.localeCompare(b));
+export const parseGenres = (genres = []) => genres.length > 1 ? genres.map(g => genreMapper(g)).sort((a, b) => a.localeCompare(b)) : genreMapper(genres[0]);

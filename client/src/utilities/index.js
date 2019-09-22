@@ -15,3 +15,6 @@ export const constCase = string => {
     return formatedWord;
   }, String());
 };
+
+
+export const isString = s => typeof s === 'string';

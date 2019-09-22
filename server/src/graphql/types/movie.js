@@ -33,7 +33,7 @@ export default gql`
     year: String!
     director: String!
     duration: String!
-    genre: [String]!
+    genre: [Genre]!
     rate: String
   }
 

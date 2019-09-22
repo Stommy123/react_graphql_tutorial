@@ -6,14 +6,13 @@ class MovieService {
 
   static getMovies = async where => {
     const { title, director, genre, ...whereClause } = where;
-    const parsedGenres = genre && parseGenres(genre);
-    const parsedTitle = title && new RegExp(title, 'i');
-    const parsedDirector = director && new RegExp(director, 'i');
+    const parsedTitle = title && new RegExp(title.trim(), 'i');
+    const parsedDirector = director && new RegExp(director.trim(), 'i');
     const variables = {
       ...whereClause,
       ...(parsedTitle && { title: parsedTitle }),
       ...(parsedDirector && { director: parsedDirector }),
-      ...(parsedGenres && { genre: parsedGenres.length > 1 ? parsedGenres : parsedGenres[0] })
+      ...(genre && { genre: parseGenres(genre) })
     };
     return await Movie.find(variables);
   };
@@ -25,8 +24,7 @@ class MovieService {
 
   static createMovie = async input => {
     const { genre, ...movieInput } = input;
-    const parsedGenres = genre && parseGenres(genre);
-    const newMovieData = { ...movieInput, ...(parsedGenres && { genre: parsedGenres }) };
+    const newMovieData = { ...movieInput, ...(genre && { genre: parseGenres(genre) }) };
     return await Movie.create(newMovieData);
   };
 
