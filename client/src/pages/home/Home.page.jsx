@@ -12,7 +12,7 @@ const Home = _ => {
     _ => {
       !loading && called && setMovie(data.randomMovie);
     },
-    [data]
+    [data, loading, called]
   );
   return (
     <SectionWrapper className="text-xs-center">

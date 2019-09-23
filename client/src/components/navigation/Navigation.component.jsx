@@ -7,7 +7,7 @@ const Navigation = _ => (
     <div className="navbar-nav collapse navbar-toggleable-sm">
       <div className="container">
         <NavLink className="navbar-brand" to="/">
-          <Icon icon="bookmark_border" />
+          <Icon icon="local_movies" />
           IMDB Mock
         </NavLink>
         <div className="nav-items clearfix">
