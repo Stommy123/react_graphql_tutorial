@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import { ModalContextProvider } from '../context';
-import  { Navigation, Modal } from '../components';
+import { Navigation, Modal } from '../components';
 import { Home, MovieList, Movie, SearchMovie, NewMovie } from '../pages';
 
 const Content = _ => (

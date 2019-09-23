@@ -1,6 +1,6 @@
-import React, { useReducer } from "react";
-import { FormGroup } from "..";
-import { isString } from "../../utilities";
+import React, { useReducer } from 'react';
+import { FormGroup } from '..';
+import { isString } from '../../utilities';
 
 const Form = ({ className, schema: { id, fields = [], formHeading, submitText } = {}, handleSubmit }) => {
   const initialState = fields.reduce((acc, field) => {
@@ -9,14 +9,14 @@ const Form = ({ className, schema: { id, fields = [], formHeading, submitText } 
   }, {});
   const formReducer = (state, payload) => ({ ...state, ...payload });
   const [state, setState] = useReducer(formReducer, initialState);
-  const handleInputChange = ({ id, value }) => setState({ [id]: isString(value) ? value.trim() : value });
+  const handleInputChange = ({ id, value }) => setState({ [id]: value });
   const onSubmit = e => {
     e.preventDefault();
     const formData = Object.keys(state).reduce((acc, id) => {
-      const value = state[id]
-      state[id] && Object.assign(acc, { [id]: value })
+      const value = state[id];
+      state[id] && Object.assign(acc, { [id]: isString(value) ? value.trim() : value });
       return acc;
-    }, {})
+    }, {});
     handleSubmit(formData);
   };
   return (

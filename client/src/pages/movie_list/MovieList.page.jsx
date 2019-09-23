@@ -20,7 +20,7 @@ const MovieList = _ => {
     _ => {
       !loading && setMovies(data.movies || []);
     },
-    [data.movies, loading]
+    [data.movies]
   );
   return (
     <SectionWrapper>
