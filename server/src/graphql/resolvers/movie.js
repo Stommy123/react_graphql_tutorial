@@ -8,7 +8,8 @@ const Query = {
 
 const Mutation = {
   createMovie: async (_, { input = {} }) => await MovieService.createMovie(input),
-  deleteMovie: async (_, { _id }) => await MovieService.deleteMovie(_id)
+  deleteMovie: async (_, { _id }) => await MovieService.deleteMovie(_id),
+  accessCache: _ => true,
 };
 
 export default { Query, Mutation };

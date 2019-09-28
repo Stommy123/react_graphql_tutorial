@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery } from 'react-apollo';
 import { FetchMovies } from '../../graphql/queries';
-import { SectionWrapper, List, Filters, EmptyContent } from '../../components';
+import { SectionWrapper, List, Filters, Loader } from '../../components';
 import { filterTypes } from './MovieList.schema';
 
 const MovieList = _ => {
   const [movies, setMovies] = useState([]);
   const [activeFilters, setActiveFilters] = useState({});
   const { data = {}, loading } = useQuery(FetchMovies, {
-    variables: { where: { ...activeFilters } },
-    fetchPolicy: 'network-only'
+    variables: { where: { ...activeFilters } }
   });
   const applyFilters = ({ genre, ...filtersToApply }) => {
     const parsedGenres = genre && genre.map(({ value }) => value);
@@ -25,11 +24,7 @@ const MovieList = _ => {
   return (
     <SectionWrapper>
       <Filters filterType={filterTypes} onApplyFilters={applyFilters} onClearFilters={clearFilter} />
-      {movies.length ? (
-        <List movies={movies} />
-      ) : (
-        <EmptyContent text="There are no movies to show" subText=" please adjust your filter or create a new one!" />
-      )}
+      {!loading ? <List movies={movies} /> : <Loader />}
     </SectionWrapper>
   );
 };

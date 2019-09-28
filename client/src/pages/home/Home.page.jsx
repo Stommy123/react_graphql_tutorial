@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { useLazyQuery } from 'react-apollo';
+import { useLazyQuery, useMutation } from 'react-apollo';
 import { FetchRandomMovie } from '../../graphql/queries';
+import { AccessCache } from '../../graphql/mutations';
 import { SectionWrapper, MovieDetails } from '../../components';
 
 const Home = _ => {
   const [movie, setMovie] = useState(null);
-  const [executeQuery, { loading, called, data = {} }] = useLazyQuery(FetchRandomMovie, {
-    fetchPolicy: 'network-only'
-  });
+  const [executeQuery, res] = useLazyQuery(FetchRandomMovie);
+  const { loading, called, data = {}, refetch } = res;
+  const bustCache = ({ data: cache }) => {
+    const cacheData = cache.data;
+    Object.keys(cacheData).forEach(key => key.includes('randomMovie') && cache.delete(key));
+  };
+  const [executeMutation] = useMutation(AccessCache, { update: bustCache });
   useEffect(
     _ => {
       !loading && called && setMovie(data.randomMovie);
@@ -22,6 +27,12 @@ const Home = _ => {
       </p>
       <button onClick={executeQuery} className="btn btn-info-outline btn-lg m-t-1">
         Randomize Movie
+      </button>
+      <button onClick={executeMutation} className="btn btn-info-outline btn-lg m-t-1">
+        Bust Cache
+      </button>
+      <button onClick={_ => refetch && refetch({})} className="btn btn-info-outline btn-lg m-t-1">
+        Refetch
       </button>
       {movie && <MovieDetails {...movie} />}
     </SectionWrapper>

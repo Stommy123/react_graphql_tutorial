@@ -20,6 +20,7 @@ export default gql`
   type Mutation {
     createMovie(input: NewMovieInput!): Movie
     deleteMovie(_id: String!): DeleteMovieResponse
+    accessCache: Boolean!
   }
 
   input MovieWhereInput {

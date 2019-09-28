@@ -22,3 +22,9 @@ export const DeleteMovie = gql`
     } 
   }
 `;
+
+export const AccessCache = gql`
+  mutation AccessCache {
+    accessCache
+  }
+`
