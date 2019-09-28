@@ -21,7 +21,7 @@ class Search extends Component {
   handleChange = value => {
     const { id, onChange } = this.props;
     onChange && onChange({ id, value });
-    this.selectRef.current.blur();
+    this.selectRef.blur();
   };
   customStyles = _ => ({
     dropdownIndicator: base => ({
