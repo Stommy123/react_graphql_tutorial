@@ -50,7 +50,7 @@ class Search extends Component {
           noOptionsMessage={this.emptyOptions}
           isSearchable
           isMulti={isMulti}
-          loadOptions={inputVal => this.debouncedLoadOptions(inputVal)}
+          loadOptions={this.debouncedLoadOptions}
           options={options}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
