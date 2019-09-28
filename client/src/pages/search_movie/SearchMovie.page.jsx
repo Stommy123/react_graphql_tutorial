@@ -3,6 +3,8 @@ import { withApollo } from 'react-apollo';
 import { FetchMovies } from '../../graphql/queries';
 import { SectionWrapper, MovieDetails, Search, EmptyContent } from '../../components';
 
+const observers = [];
+
 const SearchMovie = ({ client }) => {
   const [featuredMovie, setFeaturedMovie] = useState(null);
   const [inputValue, setInputValue] = useState(String());
@@ -11,16 +13,16 @@ const SearchMovie = ({ client }) => {
     setInputValue(input);
     return input;
   };
-  const loadOptions = async title => {
-    try {
-      const { data = {} } = await client.query({
-        query: FetchMovies,
-        variables: { where: { title } }
-      });
-      return (data.movies || []).map((movie = {}) => ({ label: movie.title, value: movie._id, data: movie }));
-    } catch (e) {
-      console.log('error fetching movies', e);
-    }
+  const moviesResolver = movies => movies.map(movie => ({ label: movie.title, value: movie._id, data: movie }));
+  const loadOptions = title => {
+    return new Promise(resolve => {
+      observers.forEach(subscription => subscription.unsubscribe());
+      observers.push(
+        client
+          .watchQuery({ query: FetchMovies, variables: { where: { title } }, fetchPolicy: 'network-only' })
+          .subscribe(({ data = {} }) => resolve(moviesResolver(data.movies || [])))
+      );
+    });
   };
   return (
     <SectionWrapper>
