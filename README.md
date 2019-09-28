@@ -331,3 +331,10 @@ const ExampleComponent ({ history }) => (
 - Enums and Scalars https://www.apollographql.com/docs/graphql-tools/scalars/
 - Resolvers https://www.apollographql.com/docs/graphql-tools/resolvers/
 - Best Practices https://graphql.org/learn/best-practices/
+- Migrating from ApolloBoost
+  https://www.apollographql.com/docs/react/migrating/boost-migration/
+  https://www.youtube.com/watch?v=8ZKpIB1pDw8&t=482s
+- Apollo Link Watch Mutation
+  https://github.com/haytko/apollo-link-watched-mutation
+- Busting the Cache
+  https://medium.com/@martinseanhunt/how-to-invalidate-cached-data-in-apollo-and-handle-updating-paginated-queries-379e4b9e4698
