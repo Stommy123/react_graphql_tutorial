@@ -1,12 +1,14 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useMemo } from 'react';
 import { FormGroup } from '..';
 import { isString } from '../../utilities';
 
 const Form = ({ className, schema: { id, fields = [], formHeading, submitText } = {}, handleSubmit }) => {
-  const initialState = fields.reduce((acc, field) => {
-    acc[field.id] = field.multiSelect ? [] : String();
-    return acc;
-  }, {});
+  const getInitialState = _ =>
+    fields.reduce((acc, field) => {
+      acc[field.id] = field.defaultValue || (field.multiSelect ? [] : String());
+      return acc;
+    }, {});
+  const initialState = useMemo(getInitialState, []);
   const formReducer = (state, payload) => ({ ...state, ...payload });
   const [state, setState] = useReducer(formReducer, initialState);
   const handleInputChange = ({ id, value }) => setState({ [id]: value });
@@ -18,6 +20,7 @@ const Form = ({ className, schema: { id, fields = [], formHeading, submitText } 
       return acc;
     }, {});
     handleSubmit(formData);
+    setState(initialState);
   };
   return (
     <form className={className} onSubmit={onSubmit} id={id}>
