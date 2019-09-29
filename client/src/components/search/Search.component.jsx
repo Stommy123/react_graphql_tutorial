@@ -5,6 +5,15 @@ import debounce from 'debounce-promise';
 import classNames from 'classnames';
 import { Icon } from '..';
 
+const customizeSearch = _ => ({
+  components: {
+    DropdownIndicator: _ => <Icon className="search" icon="search" />
+  },
+  customStyles: {
+    dropdownIndicator: base => ({ ...base, transition: 'all .2s ease' })
+  }
+});
+
 const Search = ({
   id,
   async,
@@ -27,15 +36,6 @@ const Search = ({
     onChange && onChange({ id, value });
     selectRef.current.blur();
   };
-  const customStyles = _ => ({
-    dropdownIndicator: base => ({
-      ...base,
-      transition: 'all .2s ease'
-    })
-  });
-  const customComponents = _ => ({
-    DropdownIndicator: _ => <Icon className="search" icon="search" />
-  });
   const emptyOptions = ({ inputValue }) => <div>{inputValue ? 'No Results Found' : 'Type To Search'}</div>;
   const Select = async ? AsyncSelect : ReactSelect;
   const memoizedLoadOptions = useCallback(debounce(loadOptions, 1000, { leading: true }), []);
@@ -43,14 +43,14 @@ const Search = ({
     <>
       {label && <label>{label}</label>}
       <Select
+        {...customizeSearch()}
         ref={selectRef}
         placeholder={placeholder}
-        components={customComponents()}
-        customStyles={customStyles()}
         classNamePrefix="select"
         className={classNames('react-select', className, { active })}
         noOptionsMessage={emptyOptions}
         isSearchable
+        isClearable
         isMulti={isMulti}
         loadOptions={memoizedLoadOptions}
         options={options}

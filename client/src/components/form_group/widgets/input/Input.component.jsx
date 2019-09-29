@@ -1,32 +1,14 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
-const Input = ({
-  type,
-  label,
-  placeholder,
-  id,
-  value,
-  onChange,
-  required,
-  className,
-  defaultValue,
-  defaultChecked,
-  isChecked
-}) => (
+const Input = ({ id, label, onChange, className, ...properties }) => (
   <>
     <label>{label}</label>
     <input
       id={id}
-      className={classNames("form-control", className)}
-      required={required}
-      type={type}
-      checked={isChecked}
-      defaultChecked={defaultChecked}
-      placeholder={placeholder}
-      value={value || String()}
+      className={classNames('form-control', className)}
       onChange={e => onChange({ id, value: e.target.value })}
-      defaultValue={defaultValue}
+      {...properties}
     />
   </>
 );

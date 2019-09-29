@@ -9,3 +9,4 @@ export { default as List } from './list/List.component';
 export { default as Icon } from './icon/Icon.component';
 export { default as Filters } from './filters/Filters.component';
 export { default as EmptyContent } from './empty_content/EmptyContent.component';
+export { default as Loader } from './loader/Loader.component';

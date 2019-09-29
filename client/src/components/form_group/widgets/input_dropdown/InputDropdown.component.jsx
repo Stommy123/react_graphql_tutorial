@@ -1,30 +1,16 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
-const InputDropdown = ({
-  label,
-  placeholder,
-  id,
-  value,
-  onChange,
-  required,
-  className,
-  defaultValue,
-  options = []
-}) => (
+const InputDropdown = ({ label, id, onChange, className, options = [], ...properties }) => (
   <>
     <label>{label}</label>
     <select
       id={id}
-      defaultValue={defaultValue}
       onChange={e => onChange({ id, value: e.target.value })}
-      placeholder={placeholder}
-      value={value}
-      required={required}
-      className={classNames("form-control", className)}
-    >
-      {options.map(({ id, display, value }) => (
-        <option className={classNames("form-control", className)} id={id} value={value}>
+      className={classNames('form-control', className)}
+      {...properties}>
+      {options.map(({ display, ...properties }) => (
+        <option className={classNames('form-control', className)} {...properties}>
           {display}
         </option>
       ))}

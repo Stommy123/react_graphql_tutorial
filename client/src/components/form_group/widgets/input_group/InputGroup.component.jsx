@@ -1,5 +1,5 @@
-import React, { useReducer } from "react";
-import { Input } from "..";
+import React, { useReducer } from 'react';
+import { Input } from '..';
 
 const InputGroup = ({ id, type, label, onChange, className, defaultValue, group = [], isMulti }) => {
   const initialState = { selected: defaultValue, selections: [] };
@@ -19,10 +19,9 @@ const InputGroup = ({ id, type, label, onChange, className, defaultValue, group 
   return (
     <div>
       <label>{label}</label>
-      {group.map(({ id: inputId, display, value }) => (
+      {group.map(({ id: inputId, ...properties }) => (
         <Input
-          label={display}
-          value={value}
+          {...properties}
           id={inputId}
           onChange={handleSelect}
           isChecked={isMulti ? selections.includes(inputId) : selected === inputId}

@@ -316,3 +316,9 @@ form h1 {
   color: skyblue;
   font-weight: bold;
 }
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}

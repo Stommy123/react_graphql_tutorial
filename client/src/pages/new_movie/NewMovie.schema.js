@@ -40,8 +40,10 @@ export const schema = {
       required: true
     },
     {
-      label: 'Rate',
-      type: 'text',
+      label: 'Rate (1-10)',
+      type: 'number',
+      min: '1',
+      max: '10',
       id: 'rate',
       placeholder: 'Rate',
       widget: 'input'

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery } from 'react-apollo';
 import { FetchMovies } from '../../graphql/queries';
-import { SectionWrapper, List, Filters, EmptyContent } from '../../components';
+import { SectionWrapper, List, Filters, Loader } from '../../components';
 import { filterTypes } from './MovieList.schema';
 
 const MovieList = _ => {
@@ -25,11 +25,7 @@ const MovieList = _ => {
   return (
     <SectionWrapper>
       <Filters filterType={filterTypes} onApplyFilters={applyFilters} onClearFilters={clearFilter} />
-      {movies.length ? (
-        <List movies={movies} />
-      ) : (
-        <EmptyContent text="There are no movies to show" subText=" please adjust your filter or create a new one!" />
-      )}
+      {loading ? <Loader /> : <List movies={movies} />}
     </SectionWrapper>
   );
 };
