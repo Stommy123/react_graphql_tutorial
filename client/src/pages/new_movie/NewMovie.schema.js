@@ -2,7 +2,7 @@ import { GENRES } from '../../constants';
 
 export const schema = {
   id: 'movieForm',
-  formHeading: 'Create a new movie!',
+  formHeading: 'Add a new movie!',
   submitText: 'Submit!',
   fields: [
     {
