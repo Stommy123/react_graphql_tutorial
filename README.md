@@ -2,7 +2,7 @@
 
 ### What is Graphql?
 
-GraphQL is a query language for your API. GraphQL isn't tied to any specific database or storage engine and is instead backed by your existing code and data. A GraphQL service is created by defining types and fields on those types, then providing functions (resolver) for each field on each type
+GraphQL is a query language for your API. GraphQL isn't tied to any specific database or storage engine and is instead backed by your existing code and data. A GraphQL service is created by defining types and fields on those schemas, then providing functions (resolver) for each field on each type
 
 ### What is a query language
 
@@ -12,8 +12,8 @@ A query language is any computer programming language written for the purpose of
 
 #### Simplified Data Fetching
 
-- With a REST API, typically you'd need to hit multiple endpoints to access the data that you need. For example, if your app had users who had multiple posts, yoiu make need to make a `get` request to `/users/$id` for information about that user, then another rquest to `/users/$id/posts` to get all the post that user made. What if the users had followers too? You'd have to make yet another request to `/users/$id/followrs`. That's three different requests now.
-- With Graphql, this is no longer the case. You can define one query that returns all the relavent information about this user, their posts, and their followers
+- With a REST API, typically you'd need to hit multiple endpoints to access the data that you need. For example, if your app had users who had multiple posts, you'd make need to make a `get` request to `/users/$id` for information about that user, then another request to `/users/$id/posts` to get all the post that user made. What if the users had followers too? You'd have to make yet another request to `/users/$id/followers`. That's three different requests now.
+- With Graphql, this is no longer the case. You can define one query that returns all the relevant information about this user, their posts, and their followers
 
 #### No More Overfetching / Underfetching
 
@@ -331,10 +331,7 @@ const ExampleComponent ({ history }) => (
 - Enums and Scalars https://www.apollographql.com/docs/graphql-tools/scalars/
 - Resolvers https://www.apollographql.com/docs/graphql-tools/resolvers/
 - Best Practices https://graphql.org/learn/best-practices/
-- Migrating from ApolloBoost
-  https://www.apollographql.com/docs/react/migrating/boost-migration/
-  https://www.youtube.com/watch?v=8ZKpIB1pDw8&t=482s
-- Apollo Link Watch Mutation
-  https://github.com/haytko/apollo-link-watched-mutation
-- Busting the Cache
-  https://medium.com/@martinseanhunt/how-to-invalidate-cached-data-in-apollo-and-handle-updating-paginated-queries-379e4b9e4698
+- Migrating from ApolloBoost https://www.apollographql.com/docs/react/migrating/boost-migration/
+- The caching problem summarized by the Apollo Team https://www.youtube.com/watch?v=8ZKpIB1pDw8&t=482s
+- Apollo Link Watch Mutation https://github.com/haytko/apollo-link-watched-mutation
+- Busting the Cache https://medium.com/@martinseanhunt/how-to-invalidate-cached-data-in-apollo-and-handle-updating-paginated-queries-379e4b9e4698
