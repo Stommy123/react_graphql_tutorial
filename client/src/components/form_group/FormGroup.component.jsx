@@ -8,6 +8,7 @@ const FormGroup = props => {
     group: InputGroup,
     select: Select
   }[props.widget];
+  
   return (
     <div className="form-group">
       <Component key={props.id} {...props} />

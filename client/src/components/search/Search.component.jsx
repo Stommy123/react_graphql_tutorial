@@ -1,9 +1,9 @@
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import AsyncSelect from 'react-select/async';
 import ReactSelect from 'react-select';
-import debounce from 'debounce-promise';
 import classNames from 'classnames';
 import { Icon } from '..';
+import { useDebounce } from '../../utilities';
 
 const customizeSearch = _ => ({
   components: {
@@ -29,16 +29,23 @@ const Search = ({
 }) => {
   const selectRef = useRef(null);
   const [active, setActive] = useState(false);
+
   const handleFocus = _ => setActive(true);
   const handleBlur = _ => setActive(false);
+
   const handleInputChange = input => onInputChange && onInputChange(input);
+
   const handleChange = value => {
     onChange && onChange({ id, value });
     selectRef.current.blur();
   };
+
   const emptyOptions = ({ inputValue }) => <div>{inputValue ? 'No Results Found' : 'Type To Search'}</div>;
+
   const Select = async ? AsyncSelect : ReactSelect;
-  const memoizedLoadOptions = useCallback(debounce(loadOptions, 1000, { leading: true }), []);
+
+  const memoizedLoadOptions = useDebounce(loadOptions, { wait: 1000, options: { leading: true } })
+
   return (
     <>
       {label && <label>{label}</label>}

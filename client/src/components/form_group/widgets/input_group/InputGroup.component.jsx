@@ -3,9 +3,9 @@ import { Input } from '..';
 
 const InputGroup = ({ id, type, label, onChange, className, defaultValue, group = [], isMulti }) => {
   const initialState = { selected: defaultValue, selections: [] };
-  const radioGroupReducer = (state, payload) => ({ ...state, ...payload });
-  const [state, setState] = useReducer(radioGroupReducer, initialState);
-  const { selected, selections } = state;
+
+  const [{ selected, selections }, setState] = useReducer((state, payload) => ({ ...state, ...payload }), initialState);
+
   const handleSelect = ({ id: inputId, value }) => {
     let newSelection = selections;
     if (isMulti) {
@@ -16,6 +16,7 @@ const InputGroup = ({ id, type, label, onChange, className, defaultValue, group 
     setState({ selected: inputId, ...(isMulti && { selections: newSelection }) });
     onChange && onChange({ id, value: isMulti ? newSelection : value });
   };
+  
   return (
     <div>
       <label>{label}</label>

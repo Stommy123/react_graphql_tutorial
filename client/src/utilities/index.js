@@ -1,3 +1,6 @@
+import { useCallback } from 'react'
+import debounce from 'debounce-promise';
+
 const regexArray = string =>
   string
     .replace(/[\W_]+/g, ' ')
@@ -18,3 +21,5 @@ export const constCase = string => {
 
 
 export const isString = s => typeof s === 'string';
+
+export const useDebounce = (debounceFn, { wait, options, dependencies = [] } = {}) = useCallback(debounce(debounceFn, wait, options), dependencies)

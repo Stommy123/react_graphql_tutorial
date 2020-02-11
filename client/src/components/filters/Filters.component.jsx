@@ -4,12 +4,16 @@ import { FormGroup } from '..';
 
 const Filters = ({ filterType = [], onApplyFilters, onClearFilters, className }) => {
   const [filtersToApply, setFiltersToApply] = useState({});
+
   const handleFilterChange = ({ id, value }) => setFiltersToApply({ ...filtersToApply, [id]: value });
+
   const handleClearFilters = _ => {
     setFiltersToApply({});
     onClearFilters();
   };
+
   const handleApplyFilters = _ => onApplyFilters(filtersToApply);
+  
   return (
     <div>
       <div className={classNames('filters', className)}>

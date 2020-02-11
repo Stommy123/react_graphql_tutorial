@@ -8,6 +8,7 @@ import { schema } from './NewMovie.schema';
 const NewMovie = ({ history }) => {
   const { setModal } = useContext(ModalContext);
   const [executeMutation] = useMutation(CreateMovie);
+
   const handleSubmit = async ({ genre, ...inputData }) => {
     try {
       const parsedGenres = genre && genre.map(({ value }) => value);
@@ -20,6 +21,7 @@ const NewMovie = ({ history }) => {
       setModal({ isOpen: true, content: 'There was an error creating the new movie' });
     }
   };
+  
   return (
     <SectionWrapper columnDefs="col-md-6 col-md-offset-3">
       <Form schema={schema} handleSubmit={handleSubmit} />

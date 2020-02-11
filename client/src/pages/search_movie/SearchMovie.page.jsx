@@ -6,11 +6,14 @@ import { SectionWrapper, MovieDetails, Search, EmptyContent } from '../../compon
 const SearchMovie = ({ client }) => {
   const [featuredMovie, setFeaturedMovie] = useState(null);
   const [inputValue, setInputValue] = useState(String());
+
   const handleChange = ({ value }) => setFeaturedMovie(value && value.data);
+
   const handleInputChange = input => {
     setInputValue(input);
     return input;
   };
+
   const loadOptions = async title => {
     try {
       const { data = {} } = await client.query({
@@ -22,6 +25,7 @@ const SearchMovie = ({ client }) => {
       console.log('error fetching movies', e);
     }
   };
+  
   return (
     <SectionWrapper>
       <Search

@@ -5,15 +5,18 @@ import { SectionWrapper, MovieDetails } from '../../components';
 
 const Home = _ => {
   const [movie, setMovie] = useState(null);
+
   const [executeQuery, { loading, called, data = {} }] = useLazyQuery(FetchRandomMovie, {
     fetchPolicy: 'network-only'
   });
+
   useEffect(
     _ => {
       !loading && called && setMovie(data.randomMovie);
     },
     [data, loading, called]
   );
+  
   return (
     <SectionWrapper className="text-xs-center">
       <h1 className="display-3">React Graphql Tutorial</h1>

@@ -3,15 +3,16 @@ import { FormGroup } from '..';
 import { isString } from '../../utilities';
 
 const Form = ({ className, schema: { id, fields = [], formHeading, submitText } = {}, handleSubmit }) => {
-  const getInitialState = _ =>
+  const initialState = useMemo(_ =>
     fields.reduce((acc, field) => {
       acc[field.id] = field.defaultValue || (field.multiSelect ? [] : String());
       return acc;
-    }, {});
-  const initialState = useMemo(getInitialState, []);
-  const formReducer = (state, payload) => ({ ...state, ...payload });
-  const [state, setState] = useReducer(formReducer, initialState);
+    }, {}), [fields]);
+
+  const [state, setState] = useReducer((state, payload) => ({ ...state, ...payload }), initialState);
+
   const handleInputChange = ({ id, value }) => setState({ [id]: value });
+
   const onSubmit = e => {
     e.preventDefault();
     const formData = Object.keys(state).reduce((acc, id) => {
@@ -22,6 +23,7 @@ const Form = ({ className, schema: { id, fields = [], formHeading, submitText } 
     handleSubmit(formData);
     setState(initialState);
   };
+  
   return (
     <form className={className} onSubmit={onSubmit} id={id}>
       <h1 className="display-4 m-b-2">{formHeading}</h1>

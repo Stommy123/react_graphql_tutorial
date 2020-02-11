@@ -4,6 +4,7 @@ import { ModalContext } from '../../context';
 
 const Modal = _ => {
   const { modal, setModal } = useContext(ModalContext);
+  
   return modal.isOpen ? (
     <Portal>
       <aside className="c-modal-cover fadeIn">
