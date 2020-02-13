@@ -1,6 +1,6 @@
 import React, { useReducer, useMemo } from 'react';
 import { FormGroup } from '..';
-import { isString } from '../../utilities';
+import { isString, stateReducer } from '../../utilities';
 
 const Form = ({ className, schema: { id, fields = [], formHeading, submitText } = {}, handleSubmit }) => {
   const initialState = useMemo(_ =>
@@ -9,7 +9,7 @@ const Form = ({ className, schema: { id, fields = [], formHeading, submitText } 
       return acc;
     }, {}), [fields]);
 
-  const [state, setState] = useReducer((state, payload) => ({ ...state, ...payload }), initialState);
+  const [state, setState] = useReducer(stateReducer, initialState);
 
   const handleInputChange = ({ id, value }) => setState({ [id]: value });
 

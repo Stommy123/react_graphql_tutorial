@@ -3,7 +3,7 @@ import { Query } from 'react-apollo';
 import { FetchMovie } from '../../graphql/queries';
 import { SectionWrapper, MovieDetails, Loader } from '../../components';
 
-const Movie = ({ match = {} }) => (
+const Movie = ({ match }) => (
   <SectionWrapper>
     <h3 className="detail-header">Featured Movie</h3>
     <Query query={FetchMovie} variables={{ _id: match.params.movieId }}>

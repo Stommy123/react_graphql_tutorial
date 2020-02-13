@@ -23,3 +23,5 @@ export const constCase = string => {
 export const isString = s => typeof s === 'string';
 
 export const useDebounce = (debounceFn, { wait, options, dependencies = [] } = {}) = useCallback(debounce(debounceFn, wait, options), dependencies)
+
+export const stateReducer = (state, payload) => ({ ...state, ...payload });
